@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" pages="4">
+<mxfile host="app.diagrams.net" pages="8">
   <diagram name="总体架构" id="FKBBfZe8OpKz-GE1D0I-">
     <mxGraphModel dx="3571" dy="1460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
@@ -336,8 +336,8 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="Ce7LXb0DVqXysth5AUHo" name="大而全时序图">
-    <mxGraphModel dx="1672" dy="764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+  <diagram id="Ce7LXb0DVqXysth5AUHo" name="大而全时序图V1.0">
+    <mxGraphModel dx="1749" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -427,7 +427,7 @@
         </mxCell>
         <mxCell id="9IzYqxmiXzRzK4mYFBTo-22" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;rounded=0;fontSize=11;" value="⑥ 本体描述文本">
           <mxGeometry relative="1" width="80" as="geometry">
-            <mxPoint x="730" y="832" as="sourcePoint" />
+            <mxPoint x="740" y="832" as="sourcePoint" />
             <mxPoint x="975" y="832" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -617,6 +617,540 @@
             <mxPoint x="1755" y="1960" as="sourcePoint" />
             <mxPoint x="1600" y="1960" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="总体架构-01" id="u7zrwNWWrixfPLLmu5LQ">
+    <mxGraphModel dx="1239" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="legend_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=12;fontStyle=1" value="图例" vertex="1">
+          <mxGeometry height="30" width="200" x="1330" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="legend1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=10;" value="实线箭头 = 同步调用/数据流" vertex="1">
+          <mxGeometry height="20" width="220" x="1330" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="legend2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=10;" value="虚线箭头 = 异步上报/降级路径" vertex="1">
+          <mxGeometry height="20" width="220" x="1330" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="legend3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=10;" value="红色边框 = 安全拦截点" vertex="1">
+          <mxGeometry height="20" width="220" x="1330" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="legend4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=10;" value="蓝色填充 = 核心组件" vertex="1">
+          <mxGeometry height="20" width="220" x="1330" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="legend5" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=10;" value="灰色填充 = V2.0规划组件" vertex="1">
+          <mxGeometry height="20" width="220" x="1330" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="user_layer" parent="1" style="swimlane;startSize=30;fillColor=#e1d5e7;strokeColor=#9673a6;" value="用户交互层" vertex="1">
+          <mxGeometry height="100" width="1200" x="80" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="user1" parent="user_layer" style="rounded=1;whiteSpace=wrap;html=1;" value="自然语言问询" vertex="1">
+          <mxGeometry height="40" width="200" x="50" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="user2" parent="user_layer" style="rounded=1;whiteSpace=wrap;html=1;" value="API调用" vertex="1">
+          <mxGeometry height="40" width="200" x="330" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="user3" parent="user_layer" style="rounded=1;whiteSpace=wrap;html=1;" value="定时报表" vertex="1">
+          <mxGeometry height="40" width="200" x="610" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="user4" parent="user_layer" style="rounded=1;whiteSpace=wrap;html=1;" value="大屏展示" vertex="1">
+          <mxGeometry height="40" width="200" x="890" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="upstream_layer" parent="1" style="swimlane;startSize=30;fillColor=#fff2cc;strokeColor=#d6b656;" value="上游意图解析层 (可独立部署)" vertex="1">
+          <mxGeometry height="80" width="1200" x="80" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="upstream1" parent="upstream_layer" style="rounded=1;whiteSpace=wrap;html=1;" value="自然语言理解(NLU)&#xa;意图分类与槽位填充&#xa;对话上下文管理" vertex="1">
+          <mxGeometry height="45" width="500" x="250" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="upstream_output" parent="upstream_layer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;" value="结构化查询任务单 (JSON)" vertex="1">
+          <mxGeometry height="40" width="200" x="850" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="core_layer" parent="1" style="swimlane;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="智能查询执行引擎" vertex="1">
+          <mxGeometry height="220" width="1200" x="80" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ontology_box" parent="core_layer" style="swimlane;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;" value="本体架构 (业务字典) [按Tenant命名空间隔离]" vertex="1">
+          <mxGeometry height="160" width="250" x="10" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ontology_item1" parent="ontology_box" style="text;html=1;align=left;fontSize=10;" value="对象: Loan/Book/Member/Branch" vertex="1">
+          <mxGeometry height="20" width="200" x="10" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="ontology_item2" parent="ontology_box" style="text;html=1;align=left;fontSize=10;" value="属性: title/full_name/due_date" vertex="1">
+          <mxGeometry height="20" width="200" x="10" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="ontology_item3" parent="ontology_box" style="text;html=1;align=left;fontSize=10;" value="关系: Loan→Member, Loan→Book" vertex="1">
+          <mxGeometry height="20" width="200" x="10" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="ontology_item4" parent="ontology_box" style="text;html=1;align=left;fontSize=10;" value="指标: 借阅量/逾期数/活跃读者" vertex="1">
+          <mxGeometry height="20" width="200" x="10" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="ontology_item5" parent="ontology_box" style="text;html=1;align=left;fontSize=10;" value="安全标签: PII_NAME/PII_PHONE" vertex="1">
+          <mxGeometry height="20" width="200" x="10" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="parser_node" parent="core_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="任务解析器&#xa;(含时间预处理)" vertex="1">
+          <mxGeometry height="60" width="140" x="280" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="time_preprocess_note" parent="core_layer" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;fontSize=9;" value="相对时间→绝对日期&#xa;不依赖LLM" vertex="1">
+          <mxGeometry height="30" width="140" x="280" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_parser_time" edge="1" parent="core_layer" source="parser_node" style="endArrow=none;html=1;dashed=1;" target="time_preprocess_note" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="scheduler_node" parent="core_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="任务调度器&#xa;(LangGraph)" vertex="1">
+          <mxGeometry height="60" width="140" x="460" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="router_node" parent="core_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="智能路由器" vertex="1">
+          <mxGeometry height="60" width="140" x="640" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="router_decision_table" parent="core_layer" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=9;" value="路由决策规则&#xa;• 点查 → OLTP&#xa;• 聚合/分组 → OLAP&#xa;• 关系≥3跳 → Graph&#xa;• 语义相似 → Vector" vertex="1">
+          <mxGeometry height="80" width="180" x="640" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_router_decision" edge="1" parent="core_layer" source="router_node" style="endArrow=none;html=1;dashed=1;" target="router_decision_table" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sql_gen_node" parent="core_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="SQL生成器&#xa;(LlamaIndex)" vertex="1">
+          <mxGeometry height="60" width="140" x="860" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_ontology_to_sql" edge="1" parent="core_layer" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#82b366;" value="注入本体上下文">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="128.00000000000023" as="sourcePoint" />
+            <mxPoint x="860" y="98.00000000000023" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="security_guard_box" parent="core_layer" style="swimlane;startSize=25;fillColor=#f8cecc;strokeColor=#b85450;" value="SQL安全护栏 (执行前拦截)" vertex="1">
+          <mxGeometry height="140" width="160" x="1020" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="sg1" parent="security_guard_box" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" value="① 仅允许SELECT" vertex="1">
+          <mxGeometry height="20" width="140" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sg2" parent="security_guard_box" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" value="② 禁止危险关键字" vertex="1">
+          <mxGeometry height="20" width="140" x="10" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sg3" parent="security_guard_box" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" value="③ 表白名单校验" vertex="1">
+          <mxGeometry height="20" width="140" x="10" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="sg4" parent="security_guard_box" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" value="④ 敏感字段自动脱敏" vertex="1">
+          <mxGeometry height="20" width="140" x="10" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="sg5" parent="security_guard_box" style="rounded=0;whiteSpace=wrap;html=1;fontSize=9;" value="⑤ 返回行数限制" vertex="1">
+          <mxGeometry height="20" width="140" x="10" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="result_node" parent="core_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="结果验证与融合" vertex="1">
+          <mxGeometry height="50" width="140" x="1020" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_core1" edge="1" parent="core_layer" source="parser_node" style="endArrow=classic;html=1;" target="scheduler_node" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_core2" edge="1" parent="core_layer" source="scheduler_node" style="endArrow=classic;html=1;" target="router_node" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_core3" edge="1" parent="core_layer" source="router_node" style="endArrow=classic;html=1;" target="sql_gen_node" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_core4" edge="1" parent="core_layer" source="sql_gen_node" style="endArrow=classic;html=1;" target="security_guard_box" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_core5" edge="1" parent="core_layer" source="security_guard_box" style="endArrow=classic;html=1;" target="result_node" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="data_layer" parent="1" style="swimlane;startSize=30;fillColor=#f5f5f5;strokeColor=#666666;" value="数据存储层 (多副本协同)" vertex="1">
+          <mxGeometry height="220" width="1200" x="80" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="oltp_node" parent="data_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="源头库 (OLTP)&#xa;达梦/PostgreSQL" vertex="1">
+          <mxGeometry height="80" width="180" x="60" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="oltp_fresh" parent="data_layer" style="text;html=1;fontSize=9;fontColor=#666;" value="实时写入" vertex="1">
+          <mxGeometry height="20" width="80" x="110" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="olap_node" parent="data_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="分析库 (OLAP)&#xa;Apache Doris" vertex="1">
+          <mxGeometry height="80" width="180" x="320" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="olap_fresh" parent="data_layer" style="text;html=1;fontSize=9;fontColor=#666;" value="延迟1~5min (DataX)&#xa;一致性校验: 行数/指标" vertex="1">
+          <mxGeometry height="30" width="160" x="330" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="graph_node" parent="data_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;" value="图库 (Graph)&#xa;NebulaGraph" vertex="1">
+          <mxGeometry height="80" width="180" x="560" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="graph_fresh" parent="data_layer" style="text;html=1;fontSize=9;fontColor=#666;" value="每日批量重建" vertex="1">
+          <mxGeometry height="20" width="100" x="600" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="vector_node" parent="data_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;" value="向量库 (Vector)&#xa;Milvus" vertex="1">
+          <mxGeometry height="80" width="180" x="800" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vector_fresh" parent="data_layer" style="text;html=1;fontSize=9;fontColor=#666;" value="增量Upsert" vertex="1">
+          <mxGeometry height="20" width="100" x="840" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="etl_node" parent="data_layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="数据同步层 (ETL/CDC)&#xa;DataX → Flink CDC" vertex="1">
+          <mxGeometry height="40" width="300" x="380" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_etl1" edge="1" parent="data_layer" source="oltp_node" style="endArrow=classic;html=1;" target="etl_node" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow_etl2" edge="1" parent="data_layer" source="etl_node" style="endArrow=classic;html=1;" target="olap_node" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="observability_box" parent="1" style="swimlane;startSize=30;fillColor=#f5f5f5;strokeColor=#666666;" value="可观测性体系" vertex="1">
+          <mxGeometry height="220" width="220" x="1330" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="prometheus" parent="observability_box" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Prometheus&#xa;(Metrics)" vertex="1">
+          <mxGeometry height="50" width="180" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jaeger" parent="observability_box" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Jaeger&#xa;(Traces)" vertex="1">
+          <mxGeometry height="50" width="180" x="20" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="elk" parent="observability_box" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ELK / Loki&#xa;(Logs)" vertex="1">
+          <mxGeometry height="50" width="180" x="20" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="obs_arrow1" edge="1" parent="1" source="core_layer" style="endArrow=classic;html=1;dashed=1;dashPattern=8 8;" target="observability_box" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="obs_label1" parent="obs_arrow1" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=10;" value="Metrics / Traces 上报" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint x="10" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="obs_arrow2" edge="1" parent="1" source="data_layer" style="endArrow=classic;html=1;dashed=1;dashPattern=8 8;" target="observability_box" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="obs_label2" parent="obs_arrow2" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontSize=10;" value="日志推送" vertex="1">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <mxPoint x="10" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arrow_user_upstream" edge="1" parent="1" source="user_layer" style="endArrow=classic;html=1;" target="upstream_layer" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_upstream_core" edge="1" parent="1" source="upstream_layer" style="endArrow=classic;html=1;" target="core_layer" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_core_data" edge="1" parent="1" source="core_layer" style="endArrow=classic;html=1;" target="data_layer" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="技术实现流程-02" id="4iTQoJNCgbHJdZgsBBOe">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lane_user" parent="1" style="swimlane;startSize=30;" value="用户/上游" vertex="1">
+          <mxGeometry height="150" width="1100" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="user_input" parent="lane_user" style="rounded=1;whiteSpace=wrap;html=1;" value="输入自然语言问题" vertex="1">
+          <mxGeometry height="50" width="180" x="80" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="user_receive" parent="lane_user" style="rounded=1;whiteSpace=wrap;html=1;" value="接收答案/澄清请求" vertex="1">
+          <mxGeometry height="50" width="180" x="800" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_agent" parent="1" style="swimlane;startSize=30;fillColor=#dae8fc;" value="LangGraph 编排层" vertex="1">
+          <mxGeometry height="180" width="1100" x="40" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="node_parse" parent="lane_agent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" value="意图解析+时间预处理" vertex="1">
+          <mxGeometry height="60" width="160" x="80" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="node_schedule" parent="lane_agent" style="rounded=1;whiteSpace=wrap;html=1;" value="任务调度 (StateGraph)" vertex="1">
+          <mxGeometry height="60" width="160" x="300" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="node_route" parent="lane_agent" style="rounded=1;whiteSpace=wrap;html=1;" value="智能路由决策" vertex="1">
+          <mxGeometry height="60" width="160" x="520" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="node_security_check" parent="lane_agent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="SQL安全护栏" vertex="1">
+          <mxGeometry height="60" width="160" x="740" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="node_result_merge" parent="lane_agent" style="rounded=1;whiteSpace=wrap;html=1;" value="结果融合与置信度计算" vertex="1">
+          <mxGeometry height="50" width="160" x="860" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_llm" parent="1" style="swimlane;startSize=30;fillColor=#fff2cc;" value="LlamaIndex 执行层" vertex="1">
+          <mxGeometry height="150" width="1100" x="40" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="node_get_ontology" parent="lane_llm" style="rounded=1;whiteSpace=wrap;html=1;" value="获取本体上下文" vertex="1">
+          <mxGeometry height="60" width="160" x="80" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="node_gen_sql" parent="lane_llm" style="rounded=1;whiteSpace=wrap;html=1;" value="生成SQL (NLSQL引擎)" vertex="1">
+          <mxGeometry height="60" width="180" x="300" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="node_self_correct" parent="lane_llm" style="rounded=1;whiteSpace=wrap;html=1;" value="自纠错循环 (最多3轮)" vertex="1">
+          <mxGeometry height="60" width="180" x="540" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="node_execute" parent="lane_llm" style="rounded=1;whiteSpace=wrap;html=1;" value="执行查询" vertex="1">
+          <mxGeometry height="60" width="160" x="780" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="model_fallback" parent="lane_llm" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;fontSize=9;dashed=1;" value="模型不可用→降级模板匹配" vertex="1">
+          <mxGeometry height="20" width="180" x="300" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow_model_fb" edge="1" parent="lane_llm" source="node_gen_sql" style="endArrow=none;html=1;dashed=1;" target="model_fallback" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_data" parent="1" style="swimlane;startSize=30;" value="数据层" vertex="1">
+          <mxGeometry height="120" width="1100" x="40" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="db_oltp" parent="lane_data" style="rounded=1;whiteSpace=wrap;html=1;" value="达梦 (OLTP)" vertex="1">
+          <mxGeometry height="50" width="140" x="120" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="db_olap" parent="lane_data" style="rounded=1;whiteSpace=wrap;html=1;" value="Doris (OLAP)" vertex="1">
+          <mxGeometry height="50" width="140" x="400" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="db_graph" parent="lane_data" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" value="NebulaGraph (V2.0)" vertex="1">
+          <mxGeometry height="50" width="140" x="680" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="user_input" style="endArrow=classic;html=1;" target="node_parse" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="node_parse" style="endArrow=classic;html=1;" target="node_schedule" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="node_schedule" style="endArrow=classic;html=1;" target="node_route" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="node_route" style="endArrow=classic;html=1;" target="node_get_ontology" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="node_get_ontology" style="endArrow=classic;html=1;" target="node_gen_sql" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="node_gen_sql" style="endArrow=classic;html=1;" target="node_self_correct" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" edge="1" parent="1" source="node_self_correct" style="endArrow=classic;html=1;" target="node_security_check" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" edge="1" parent="1" source="node_security_check" style="endArrow=classic;html=1;" target="node_execute" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" edge="1" parent="1" source="node_execute" style="endArrow=classic;html=1;" target="node_result_merge" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" edge="1" parent="1" source="node_result_merge" style="endArrow=classic;html=1;" target="user_receive" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_db1" edge="1" parent="1" source="node_execute" style="endArrow=classic;html=1;dashed=1;" target="db_oltp" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_db2" edge="1" parent="1" source="node_execute" style="endArrow=classic;html=1;dashed=1;" target="db_olap" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="查询时序图-03" id="nvbKQsrO8kRtZKlzlJvY">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="actor_user" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="上游Agent" vertex="1">
+          <mxGeometry height="60" width="30" x="40" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_parser" parent="1" style="swimlane;startSize=30;" value="任务解析器" vertex="1">
+          <mxGeometry height="500" width="120" x="160" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_scheduler" parent="1" style="swimlane;startSize=30;" value="任务调度器" vertex="1">
+          <mxGeometry height="500" width="120" x="320" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_router" parent="1" style="swimlane;startSize=30;" value="智能路由器" vertex="1">
+          <mxGeometry height="500" width="120" x="480" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_ontology" parent="1" style="swimlane;startSize=30;" value="本体字典" vertex="1">
+          <mxGeometry height="500" width="120" x="640" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_sqlgen" parent="1" style="swimlane;startSize=30;" value="SQL生成器" vertex="1">
+          <mxGeometry height="500" width="120" x="800" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_security" parent="1" style="swimlane;startSize=30;fillColor=#f8cecc;" value="安全护栏" vertex="1">
+          <mxGeometry height="500" width="120" x="960" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_db" parent="1" style="swimlane;startSize=30;" value="数据库" vertex="1">
+          <mxGeometry height="500" width="100" x="1120" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="line1" edge="1" parent="1" style="endArrow=classic;html=1;" value="1. 发送JSON任务单">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="70" y="120" as="sourcePoint" />
+            <mxPoint x="160" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line2" edge="1" parent="1" style="endArrow=classic;html=1;" value="2. 语义校验+时间预处理">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="176" as="sourcePoint" />
+            <mxPoint x="320" y="176" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line3" edge="1" parent="1" style="endArrow=classic;html=1;" value="3. 生成任务依赖序列">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="200" as="sourcePoint" />
+            <mxPoint x="480" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line4" edge="1" parent="1" style="endArrow=classic;html=1;" value="4. 获取本体映射">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="240" as="sourcePoint" />
+            <mxPoint x="640" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line5" edge="1" parent="1" style="endArrow=classic;html=1;dashed=1;" value="5. 返回字段/指标定义">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="260" as="sourcePoint" />
+            <mxPoint x="600" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line6" edge="1" parent="1" style="endArrow=classic;html=1;" value="6. 注入上下文生成SQL">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="300" as="sourcePoint" />
+            <mxPoint x="800" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line7" edge="1" parent="1" style="endArrow=classic;html=1;" value="7. 提交SQL校验">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="920" y="340" as="sourcePoint" />
+            <mxPoint x="960" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line8" edge="1" parent="1" style="endArrow=classic;html=1;dashed=1;" value="8. 校验通过/改写">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="960" y="360" as="sourcePoint" />
+            <mxPoint x="920" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line9" edge="1" parent="1" style="endArrow=classic;html=1;" value="9. 执行SQL">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="400" as="sourcePoint" />
+            <mxPoint x="1120" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line10" edge="1" parent="1" style="endArrow=classic;html=1;dashed=1;" value="10. 返回结果集">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1120" y="420" as="sourcePoint" />
+            <mxPoint x="1080" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line11" edge="1" parent="1" style="endArrow=classic;html=1;" value="11. 结果验证与融合">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="460" as="sourcePoint" />
+            <mxPoint x="160" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="line12" edge="1" parent="1" style="endArrow=classic;html=1;dashed=1;" value="12. 返回最终答案">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="480" as="sourcePoint" />
+            <mxPoint x="70" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="time_note_seq" parent="1" style="text;html=1;fontSize=9;fillColor=#f8cecc;" value="时间预处理: 相对时间→绝对日期" vertex="1">
+          <mxGeometry height="20" width="120" x="160" y="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="大而全时序图-03" id="PAZuserfrCOTbSST12cl">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="actor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="用户" vertex="1">
+          <mxGeometry height="60" width="30" x="30" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="obj1" parent="1" style="swimlane;startSize=30;" value="NLU" vertex="1">
+          <mxGeometry height="600" width="100" x="120" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="obj2" parent="1" style="swimlane;startSize=30;" value="执行引擎" vertex="1">
+          <mxGeometry height="600" width="120" x="260" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="obj3" parent="1" style="swimlane;startSize=30;" value="本体字典" vertex="1">
+          <mxGeometry height="600" width="120" x="420" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="obj4" parent="1" style="swimlane;startSize=30;" value="LLM" vertex="1">
+          <mxGeometry height="600" width="120" x="580" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="obj5" parent="1" style="swimlane;startSize=30;fillColor=#f8cecc;" value="安全护栏" vertex="1">
+          <mxGeometry height="600" width="120" x="740" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="obj6" parent="1" style="swimlane;startSize=30;" value="OLTP" vertex="1">
+          <mxGeometry height="600" width="100" x="900" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="obj7" parent="1" style="swimlane;startSize=30;" value="OLAP" vertex="1">
+          <mxGeometry height="600" width="100" x="1040" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="obj8" parent="1" style="swimlane;startSize=30;dashed=1;" value="Graph" vertex="1">
+          <mxGeometry height="600" width="100" x="1180" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="msg1" edge="1" parent="1" style="endArrow=classic;html=1;" value="自然语言">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="120" as="sourcePoint" />
+            <mxPoint x="120" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg2" edge="1" parent="1" style="endArrow=classic;html=1;" value="结构化意图">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="160" as="sourcePoint" />
+            <mxPoint x="260" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg3" edge="1" parent="1" style="endArrow=classic;html=1;" value="获取本体">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="200" as="sourcePoint" />
+            <mxPoint x="420" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg4" edge="1" parent="1" style="endArrow=classic;html=1;" value="生成SQL">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="240" as="sourcePoint" />
+            <mxPoint x="580" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg5" edge="1" parent="1" style="endArrow=classic;html=1;" value="SQL校验">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="280" as="sourcePoint" />
+            <mxPoint x="740" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg6" edge="1" parent="1" style="endArrow=classic;html=1;" value="路由执行">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="320" as="sourcePoint" />
+            <mxPoint x="900" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="branch_oltp" parent="1" style="text;html=1;fontSize=9;" value="点查" vertex="1">
+          <mxGeometry height="20" width="50" x="900" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="branch_olap" parent="1" style="text;html=1;fontSize=9;" value="聚合" vertex="1">
+          <mxGeometry height="20" width="50" x="1040" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="branch_graph" parent="1" style="text;html=1;fontSize=9;" value="≥3跳" vertex="1">
+          <mxGeometry height="20" width="50" x="1180" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="msg7" edge="1" parent="1" style="endArrow=classic;html=1;dashed=1;" value="返回结果">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1000" y="400" as="sourcePoint" />
+            <mxPoint x="740" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg8" edge="1" parent="1" style="endArrow=classic;html=1;" value="置信度计算">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740" y="440" as="sourcePoint" />
+            <mxPoint x="380" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg9" edge="1" parent="1" style="endArrow=classic;html=1;dashed=1;" value="最终答案">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="480" as="sourcePoint" />
+            <mxPoint x="60" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fallback_note" parent="1" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;fontSize=9;" value="模型不可用→降级模板匹配" vertex="1">
+          <mxGeometry height="20" width="150" x="580" y="200" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

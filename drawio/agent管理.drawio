@@ -1,0 +1,535 @@
+<mxfile host="app.diagrams.net" pages="7">
+  <diagram name="01-Agent中枢概念总览" id="hDDRZZhDeE8QKfmswDrg">
+    <mxGraphModel dx="1487" dy="1980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1250" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f1ff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent能力中台" vertex="1">
+          <mxGeometry height="74" width="180" x="70" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent定义" vertex="1">
+          <mxGeometry height="74" width="180" x="390" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent版本" vertex="1">
+          <mxGeometry height="74" width="180" x="710" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent应用" vertex="1">
+          <mxGeometry height="74" width="180" x="1030" y="-20" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent实例" vertex="1">
+          <mxGeometry height="74" width="180" x="1350" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3efff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent构建模式 通用 / 本体增强" vertex="1">
+          <mxGeometry height="74" width="180" x="1670" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源类型" vertex="1">
+          <mxGeometry height="74" width="180" x="70" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源" vertex="1">
+          <mxGeometry height="74" width="180" x="370" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源版本" vertex="1">
+          <mxGeometry height="74" width="180" x="710" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源授权" vertex="1">
+          <mxGeometry height="74" width="180" x="1030" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源绑定" vertex="1">
+          <mxGeometry height="74" width="180" x="1350" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="外部资源引用" vertex="1">
+          <mxGeometry height="74" width="180" x="1680" y="336" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3efff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="本体绑定 可选" vertex="1">
+          <mxGeometry height="74" width="180" x="390" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3efff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="本体实例" vertex="1">
+          <mxGeometry height="74" width="180" x="710" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="预检报告" vertex="1">
+          <mxGeometry height="74" width="180" x="1030" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent发布快照 非Runtime快照" vertex="1">
+          <mxGeometry height="74" width="180" x="1350" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent发布" vertex="1">
+          <mxGeometry height="74" width="180" x="1670" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eefbff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent运行器" vertex="1">
+          <mxGeometry height="74" width="180" x="390" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eefbff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent会话" vertex="1">
+          <mxGeometry height="74" width="180" x="710" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eefbff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent消息" vertex="1">
+          <mxGeometry height="74" width="180" x="1150" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffeef0;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="人工确认任务" vertex="1">
+          <mxGeometry height="74" width="180" x="1280" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eefbff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent运行证据" vertex="1">
+          <mxGeometry height="74" width="180" x="1670" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#555555;align=left;verticalAlign=top;spacing=4;" value="说明：本图表达纯业务概念关系，不表达组件、接口、表结构或部署。Agent发布快照是Agent侧业务配置结果，不是Runtime内部快照。未选择本体实例时为通用Agent，不依赖Runtime。" vertex="1">
+          <mxGeometry height="70" width="1700" x="70" y="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="25" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="管理能力定义 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="26" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="形成版本 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="27" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="6" value="被实例采用 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="28" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="6" value="包含实例 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="29" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="选择模式 n:1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="30" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="9" value="定义分类 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="31" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="10" value="形成版本 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="32" edge="1" parent="1" source="10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="11" value="授权范围 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="12" value="建立资源绑定 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="34" edge="1" parent="1" source="12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="10" value="指向资源版本 n:1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="35" edge="1" parent="1" source="13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="12" value="参与引用 0..n:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="36" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;exitX=0;exitY=1;exitDx=0;exitDy=0;curved=1;" target="14" value="可选本体绑定 1:0..1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1350" y="180" />
+              <mxPoint x="720" y="180" />
+              <mxPoint x="720" y="377" />
+              <mxPoint x="480" y="377" />
+            </Array>
+            <mxPoint x="1330" y="144" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="37" edge="1" parent="1" source="14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="15" value="指向本体实例 n:1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="38" edge="1" parent="1" source="12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="16" value="参与预检 n:1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="39" edge="1" parent="1" source="14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="16" value="本体增强预检 0..1:1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="40" edge="1" parent="1" source="16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="17" value="通过后生成快照 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="41" edge="1" parent="1" source="17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="18" value="形成发布单 1:1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="42" edge="1" parent="1" source="18" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="19" value="部署运行 n:1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1760" y="710" />
+              <mxPoint x="480" y="710" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="43" edge="1" parent="1" source="19" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="20" value="承载会话 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="44" edge="1" parent="1" source="20" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="21" value="包含消息 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="45" edge="1" parent="1" source="20" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;elbow=vertical;curved=1;" target="22" value="产生确认 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="46" edge="1" parent="1" source="21" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="23" value="形成证据 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="47" edge="1" parent="1" source="22" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="23" value="记录确认 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="02-Agent管理概念关系" id="aef85Kwk69j7KTIGEPBp">
+    <mxGraphModel dx="1487" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="780" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent定义" vertex="1">
+          <mxGeometry height="74" width="180" x="80" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent版本" vertex="1">
+          <mxGeometry height="74" width="180" x="390" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent策略" vertex="1">
+          <mxGeometry height="74" width="180" x="700" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent生命周期事件" vertex="1">
+          <mxGeometry height="74" width="180" x="1010" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent应用" vertex="1">
+          <mxGeometry height="74" width="180" x="80" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent实例" vertex="1">
+          <mxGeometry height="74" width="180" x="390" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent发布" vertex="1">
+          <mxGeometry height="74" width="180" x="700" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent发布快照" vertex="1">
+          <mxGeometry height="74" width="180" x="1010" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#555555;align=left;verticalAlign=top;spacing=4;" value="口径：Agent版本不等于Agent应用。版本表达能力蓝图演进，应用表达业务投放场景。" vertex="1">
+          <mxGeometry height="50" width="1200" x="80" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="11" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="形成版本 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="被实例采用 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="包含实例 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="约束版本 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="8" value="发起发布 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="16" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="9" value="形成快照 1:1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="17" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="5" value="记录事件 1:n">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="350" />
+              <mxPoint x="1080" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="03-Agent实例概念关系" id="G5ZUGpi_aADV7LeQAq_n">
+    <mxGraphModel dx="1983" dy="973" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2050" pageHeight="1050" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent应用" vertex="1">
+          <mxGeometry height="74" width="180" x="70" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent版本" vertex="1">
+          <mxGeometry height="74" width="180" x="390" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3efff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent构建模式" vertex="1">
+          <mxGeometry height="74" width="180" x="710" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eefbff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent运行证据" vertex="1">
+          <mxGeometry height="74" width="180" x="1030" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eefbff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent消息" vertex="1">
+          <mxGeometry height="74" width="180" x="1350" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent实例" vertex="1">
+          <mxGeometry height="74" width="180" x="390" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent发布快照" vertex="1">
+          <mxGeometry height="74" width="180" x="1030" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eefbff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent会话" vertex="1">
+          <mxGeometry height="74" width="180" x="1350" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源绑定" vertex="1">
+          <mxGeometry height="74" width="180" x="70" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源版本" vertex="1">
+          <mxGeometry height="74" width="180" x="390" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3efff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="本体绑定 可选" vertex="1">
+          <mxGeometry height="74" width="180" x="710" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3efff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="本体实例" vertex="1">
+          <mxGeometry height="74" width="180" x="1030" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffeef0;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="人工确认任务" vertex="1">
+          <mxGeometry height="74" width="180" x="1350" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#555555;align=left;verticalAlign=top;spacing=4;" value="口径：不选择本体实例时仍可构建通用Agent；选择本体实例后才进入本体增强和Runtime合同链路。" vertex="1">
+          <mxGeometry height="50" width="1500" x="70" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="16" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="7" value="包含实例 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="17" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="作为版本 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="18" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="选择模式 n:1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="19" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="10" value="绑定资源 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="20" edge="1" parent="1" source="10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="11" value="指向版本 n:1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="12" value="可选绑定 1:0..1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="22" edge="1" parent="1" source="12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="13" value="指向本体 n:1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="23" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="8" value="发布快照 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="24" edge="1" parent="1" source="7" style="edgeStyle=isometricEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="9" value="产生会话 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="6" value="包含消息 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="26" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="5" value="形成证据 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="27" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="14" value="产生确认 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="28" edge="1" parent="1" source="14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="5" value="记录确认 1:n">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1330" y="737" />
+              <mxPoint x="1330" y="350" />
+              <mxPoint x="1120" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="04-资源管理概念关系" id="fEwqDJL6RzelNZcrr607">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1700" pageHeight="1050" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源类型" vertex="1">
+          <mxGeometry height="74" width="180" x="80" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源" vertex="1">
+          <mxGeometry height="74" width="180" x="390" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源版本" vertex="1">
+          <mxGeometry height="74" width="180" x="700" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源授权" vertex="1">
+          <mxGeometry height="74" width="180" x="1010" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent实例" vertex="1">
+          <mxGeometry height="74" width="180" x="390" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源绑定" vertex="1">
+          <mxGeometry height="74" width="180" x="700" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eefbff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源使用记录" vertex="1">
+          <mxGeometry height="74" width="180" x="1010" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源生命周期事件" vertex="1">
+          <mxGeometry height="74" width="180" x="390" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#555555;align=left;verticalAlign=top;spacing=4;" value="口径：资源可按类型区分，资源版本承载演进，资源绑定表达Agent实例实际使用哪个资源版本。" vertex="1">
+          <mxGeometry height="60" width="1300" x="80" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="11" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="2" value="属于类型 n:1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="形成版本 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="5" value="授予范围 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="建立绑定 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="绑定版本 n:1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="16" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="9" value="记录事件 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="17" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="8" value="产生记录 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="18" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="8" value="被使用 1:n">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="05-资源生命周期关系" id="wLlOBm6diE7SkOAa9AtH">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1500" pageHeight="760" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="资源草稿" vertex="1">
+          <mxGeometry height="74" width="180" x="90" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="资源检查中" vertex="1">
+          <mxGeometry height="74" width="180" x="390" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="资源已发布" vertex="1">
+          <mxGeometry height="74" width="180" x="690" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="资源已停用" vertex="1">
+          <mxGeometry height="74" width="180" x="990" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="资源异常" vertex="1">
+          <mxGeometry height="74" width="180" x="390" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="资源已归档" vertex="1">
+          <mxGeometry height="74" width="180" x="990" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#555555;align=left;verticalAlign=top;spacing=4;" value="说明：状态节点是业务状态概念，不是新增数据库表。" vertex="1">
+          <mxGeometry height="45" width="1100" x="90" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="9" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="提交检查">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="检查通过发布">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="6" value="检查失败">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="2" value="修复后重提">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="5" value="停用">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="重新启用">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="归档">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="16" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="停用后归档">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="06-Agent管理生命周期关系" id="AMtANUZ4uGc2w-xHxYQf">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1700" pageHeight="760" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="定义草稿" vertex="1">
+          <mxGeometry height="74" width="180" x="90" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="定义启用" vertex="1">
+          <mxGeometry height="74" width="180" x="390" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="版本已发布" vertex="1">
+          <mxGeometry height="74" width="180" x="690" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="应用草稿" vertex="1">
+          <mxGeometry height="74" width="180" x="990" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="应用启用" vertex="1">
+          <mxGeometry height="74" width="180" x="1290" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent归档" vertex="1">
+          <mxGeometry height="74" width="180" x="690" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#555555;align=left;verticalAlign=top;spacing=4;" value="说明：本图表达Agent定义、版本、应用层面的业务状态迁移，不表达实例运行状态。" vertex="1">
+          <mxGeometry height="45" width="1200" x="90" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="9" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="定义启用">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="发布版本">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="5" value="投放到应用">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="6" value="应用启用">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="版本归档">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="应用停用归档">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="定义归档">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="07-Agent实例生命周期关系" id="tWQUVcfk3g2POZQdCCpr">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1500" pageHeight="760" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="实例草稿" vertex="1">
+          <mxGeometry height="74" width="180" x="90" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="实例就绪" vertex="1">
+          <mxGeometry height="74" width="180" x="390" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="部署中" vertex="1">
+          <mxGeometry height="74" width="180" x="690" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="运行中" vertex="1">
+          <mxGeometry height="74" width="180" x="990" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="实例异常" vertex="1">
+          <mxGeometry height="74" width="180" x="390" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="已停止" vertex="1">
+          <mxGeometry height="74" width="180" x="990" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#555555;align=left;verticalAlign=top;spacing=4;" value="说明：实例预检按构建模式分支；通用Agent不走Runtime，本体增强Agent才走Runtime预检和调用链路。" vertex="1">
+          <mxGeometry height="45" width="1200" x="90" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="9" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="预检通过">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="发起部署">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="5" value="健康通过">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="6" value="部署失败">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="主动停止">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="6" value="健康失败">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="修复后预检">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="16" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="重新启动">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="17" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="2" value="配置变更退回">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

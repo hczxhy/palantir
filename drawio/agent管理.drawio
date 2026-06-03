@@ -427,7 +427,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="06-Agent管理生命周期关系" id="AMtANUZ4uGc2w-xHxYQf">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1700" pageHeight="760" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="1487" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="760" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -467,10 +467,10 @@
         <mxCell id="13" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="版本归档">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="14" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="应用停用归档">
+        <mxCell id="14" edge="1" parent="1" source="6" style="edgeStyle=isometricEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="应用停用归档">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="15" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="定义归档">
+        <mxCell id="15" edge="1" parent="1" source="3" style="edgeStyle=isometricEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;elbow=vertical;" target="7" value="定义归档">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>

@@ -477,30 +477,30 @@
     </mxGraphModel>
   </diagram>
   <diagram name="07-Agent实例生命周期关系" id="tWQUVcfk3g2POZQdCCpr">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1500" pageHeight="760" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="1487" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="760" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="实例草稿" vertex="1">
-          <mxGeometry height="74" width="180" x="90" y="120" as="geometry" />
+          <mxGeometry height="74" width="180" x="40" y="120" as="geometry" />
         </mxCell>
         <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="实例就绪" vertex="1">
           <mxGeometry height="74" width="180" x="390" y="120" as="geometry" />
         </mxCell>
         <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="部署中" vertex="1">
-          <mxGeometry height="74" width="180" x="690" y="120" as="geometry" />
+          <mxGeometry height="74" width="180" x="710" y="306" as="geometry" />
         </mxCell>
         <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="运行中" vertex="1">
-          <mxGeometry height="74" width="180" x="990" y="120" as="geometry" />
+          <mxGeometry height="74" width="180" x="920" y="620" as="geometry" />
         </mxCell>
         <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="实例异常" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="420" as="geometry" />
+          <mxGeometry height="74" width="180" x="390" y="306" as="geometry" />
         </mxCell>
         <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="已停止" vertex="1">
-          <mxGeometry height="74" width="180" x="990" y="420" as="geometry" />
+          <mxGeometry height="74" width="180" x="710" y="480" as="geometry" />
         </mxCell>
         <mxCell id="8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#555555;align=left;verticalAlign=top;spacing=4;" value="说明：实例预检按构建模式分支；通用Agent不走Runtime，本体增强Agent才走Runtime预检和调用链路。" vertex="1">
-          <mxGeometry height="45" width="1200" x="90" y="630" as="geometry" />
+          <mxGeometry height="45" width="1200" x="50" y="694" as="geometry" />
         </mxCell>
         <mxCell id="9" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="预检通过">
           <mxGeometry relative="1" as="geometry" />
@@ -511,16 +511,16 @@
         <mxCell id="11" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="5" value="健康通过">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="12" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="6" value="部署失败">
+        <mxCell id="12" edge="1" parent="1" source="4" style="edgeStyle=entityRelationEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;elbow=vertical;" target="6" value="部署失败">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="13" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="主动停止">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="14" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="6" value="健康失败">
+        <mxCell id="14" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;entryX=0.5;entryY=1;entryDx=0;entryDy=0;elbow=vertical;" target="6" value="健康失败">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="15" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="修复后预检">
+        <mxCell id="15" edge="1" parent="1" source="6" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="修复后预检">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="16" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="重新启动">

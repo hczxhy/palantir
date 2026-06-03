@@ -315,7 +315,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="04-资源管理概念关系" id="fEwqDJL6RzelNZcrr607">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1700" pageHeight="1050" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="1859" dy="913" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1050" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -332,7 +332,7 @@
           <mxGeometry height="74" width="180" x="1010" y="80" as="geometry" />
         </mxCell>
         <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent实例" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="380" as="geometry" />
+          <mxGeometry height="74" width="180" x="700" y="700" as="geometry" />
         </mxCell>
         <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源绑定" vertex="1">
           <mxGeometry height="74" width="180" x="700" y="380" as="geometry" />
@@ -341,7 +341,7 @@
           <mxGeometry height="74" width="180" x="1010" y="380" as="geometry" />
         </mxCell>
         <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源生命周期事件" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="700" as="geometry" />
+          <mxGeometry height="74" width="180" x="390" y="380" as="geometry" />
         </mxCell>
         <mxCell id="10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#555555;align=left;verticalAlign=top;spacing=4;" value="口径：资源可按类型区分，资源版本承载演进，资源绑定表达Agent实例实际使用哪个资源版本。" vertex="1">
           <mxGeometry height="60" width="1300" x="80" y="900" as="geometry" />
@@ -361,13 +361,13 @@
         <mxCell id="15" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="绑定版本 n:1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="16" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="9" value="记录事件 1:n">
+        <mxCell id="16" edge="1" parent="1" source="3" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="9" value="记录事件 1:n">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="17" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="8" value="产生记录 1:n">
+        <mxCell id="17" edge="1" parent="1" source="6" style="edgeStyle=isometricEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="8" value="产生记录 1:n">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="18" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="8" value="被使用 1:n">
+        <mxCell id="18" edge="1" parent="1" source="4" style="edgeStyle=isometricEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;elbow=vertical;" target="8" value="被使用 1:n">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>

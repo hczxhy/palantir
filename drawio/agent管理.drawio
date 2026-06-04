@@ -1,532 +1,439 @@
 <mxfile host="app.diagrams.net" pages="7">
-  <diagram name="01-Agent中枢概念总览" id="hDDRZZhDeE8QKfmswDrg">
-    <mxGraphModel dx="1487" dy="1980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1250" background="#ffffff" math="0" shadow="0">
+  <diagram name="01-v2.5分层表结构总览" id="aNgvs-UVqgvqmBE8oZ3m">
+    <mxGraphModel dx="1487" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1400" background="#FFFFFF" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f1ff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent能力中台" vertex="1">
-          <mxGeometry height="74" width="180" x="70" y="70" as="geometry" />
+        <mxCell id="ov_title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#60A5FA;strokeWidth=1;fontSize=15;fontStyle=1;align=center;verticalAlign=middle;" value="v2.5物理设计口径：核心主线优先，扩展治理分层候选" vertex="1">
+          <mxGeometry height="58" width="1900" x="80" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent定义" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="70" as="geometry" />
+        <mxCell id="ov_note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontSize=12;spacing=10;align=left;verticalAlign=top;" value="当前阶段只是设计评审模型，不生成DDL、不修改数据库。Agent应用、发布快照、运行请求不作为前台强实体；只有出现治理复杂度后再拆独立表。" vertex="1">
+          <mxGeometry height="70" width="1900" x="80" y="120" as="geometry" />
         </mxCell>
-        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent版本" vertex="1">
-          <mxGeometry height="74" width="180" x="710" y="70" as="geometry" />
+        <mxCell id="ov_l1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#818CF8;strokeWidth=1;fontSize=15;fontStyle=1;align=center;verticalAlign=middle;" value="设计层" vertex="1">
+          <mxGeometry height="48" width="260" x="120" y="240" as="geometry" />
         </mxCell>
-        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent应用" vertex="1">
-          <mxGeometry height="74" width="180" x="1030" y="-20" as="geometry" />
+        <mxCell id="ov_l2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#60A5FA;strokeWidth=1;fontSize=15;fontStyle=1;align=center;verticalAlign=middle;" value="版本层" vertex="1">
+          <mxGeometry height="48" width="260" x="480" y="240" as="geometry" />
         </mxCell>
-        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent实例" vertex="1">
-          <mxGeometry height="74" width="180" x="1350" y="70" as="geometry" />
+        <mxCell id="ov_l3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#34D399;strokeWidth=1;fontSize=15;fontStyle=1;align=center;verticalAlign=middle;" value="部署层" vertex="1">
+          <mxGeometry height="48" width="260" x="840" y="240" as="geometry" />
         </mxCell>
-        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3efff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent构建模式 通用 / 本体增强" vertex="1">
-          <mxGeometry height="74" width="180" x="1670" y="70" as="geometry" />
+        <mxCell id="ov_l4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#F59E0B;strokeWidth=1;fontSize=15;fontStyle=1;align=center;verticalAlign=middle;" value="运行层" vertex="1">
+          <mxGeometry height="48" width="520" x="1200" y="240" as="geometry" />
         </mxCell>
-        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源类型" vertex="1">
-          <mxGeometry height="74" width="180" x="70" y="340" as="geometry" />
+        <mxCell id="ov_def" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#818CF8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_definition Agent能力定义&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;定义一类Agent能力蓝图&lt;br/&gt;业务域、负责人、边界&lt;br/&gt;不代表运行实例&lt;/font&gt;" vertex="1">
+          <mxGeometry height="130" width="260" x="120" y="340" as="geometry" />
         </mxCell>
-        <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源" vertex="1">
-          <mxGeometry height="74" width="180" x="370" y="304" as="geometry" />
+        <mxCell id="ov_ver" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#60A5FA;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_version Agent配置版本&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;属于一个Agent定义&lt;br/&gt;承载配置版本演进&lt;br/&gt;发布后固化配置载荷/hash&lt;/font&gt;" vertex="1">
+          <mxGeometry height="140" width="260" x="480" y="335" as="geometry" />
         </mxCell>
-        <mxCell id="10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源版本" vertex="1">
-          <mxGeometry height="74" width="180" x="710" y="340" as="geometry" />
+        <mxCell id="ov_inst" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#34D399;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_instance Agent运行实例&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;基于一个Agent版本&lt;br/&gt;承载场景/入口/可见范围&lt;br/&gt;可选绑定本体YAML实例&lt;/font&gt;" vertex="1">
+          <mxGeometry height="150" width="280" x="840" y="330" as="geometry" />
         </mxCell>
-        <mxCell id="11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源授权" vertex="1">
-          <mxGeometry height="74" width="180" x="1030" y="230" as="geometry" />
+        <mxCell id="ov_sess" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#F59E0B;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_session Agent会话&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;属于一个Agent实例&lt;br/&gt;承载连续交互过程&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="240" x="1200" y="345" as="geometry" />
         </mxCell>
-        <mxCell id="12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源绑定" vertex="1">
-          <mxGeometry height="74" width="180" x="1350" y="410" as="geometry" />
+        <mxCell id="ov_msg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#F59E0B;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_message Agent消息&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;属于一个会话&lt;br/&gt;用户/Agent/系统/工具消息&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="240" x="1510" y="345" as="geometry" />
         </mxCell>
-        <mxCell id="13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="外部资源引用" vertex="1">
-          <mxGeometry height="74" width="180" x="1680" y="336" as="geometry" />
+        <mxCell id="ov_evi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE7F3;strokeColor=#F472B6;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_evidence Agent运行证据&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;关联会话/消息/工具/HITL/动作结果&lt;br/&gt;用于审计、回放、可信答复&lt;/font&gt;" vertex="1">
+          <mxGeometry height="140" width="300" x="1900" y="335" as="geometry" />
         </mxCell>
-        <mxCell id="14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3efff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="本体绑定 可选" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="610" as="geometry" />
+        <mxCell id="ov_res" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDFA;strokeColor=#2DD4BF;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;资源管理核心&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;be_agent_resource&lt;br/&gt;be_agent_resource_version&lt;br/&gt;be_agent_resource_binding&lt;br/&gt;be_agent_resource_auth_scope&lt;br/&gt;be_agent_external_resource_ref&lt;/font&gt;" vertex="1">
+          <mxGeometry height="190" width="420" x="120" y="650" as="geometry" />
         </mxCell>
-        <mxCell id="15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3efff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="本体实例" vertex="1">
-          <mxGeometry height="74" width="180" x="710" y="500" as="geometry" />
+        <mxCell id="ov_build" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;构建与发布治理&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;be_agent_ontology_binding 可选&lt;br/&gt;be_agent_preflight_report&lt;br/&gt;be_agent_release 保存发布配置载荷/hash&lt;br/&gt;不保存runtime_snapshot_id&lt;/font&gt;" vertex="1">
+          <mxGeometry height="190" width="480" x="660" y="650" as="geometry" />
         </mxCell>
-        <mxCell id="16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="预检报告" vertex="1">
-          <mxGeometry height="74" width="180" x="1030" y="610" as="geometry" />
+        <mxCell id="ov_run" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=#FB923C;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;运行治理扩展候选&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;be_agent_tool_call&lt;br/&gt;be_agent_hitl_task&lt;br/&gt;be_agent_action_result&lt;br/&gt;be_agent_cost_metric&lt;br/&gt;be_agent_quality_sample&lt;/font&gt;" vertex="1">
+          <mxGeometry height="190" width="460" x="1260" y="650" as="geometry" />
         </mxCell>
-        <mxCell id="17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent发布快照 非Runtime快照" vertex="1">
-          <mxGeometry height="74" width="180" x="1350" y="610" as="geometry" />
+        <mxCell id="ov_detail" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;强结构资源候选&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;Prompt / RAG / Skill / Intent&lt;br/&gt;MCP / Memory / Model&lt;br/&gt;Vector / Graph / OutputTemplate&lt;br/&gt;Evaluation / Policy&lt;/font&gt;" vertex="1">
+          <mxGeometry height="190" width="360" x="1800" y="650" as="geometry" />
         </mxCell>
-        <mxCell id="18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent发布" vertex="1">
-          <mxGeometry height="74" width="180" x="1670" y="610" as="geometry" />
-        </mxCell>
-        <mxCell id="19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eefbff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent运行器" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="880" as="geometry" />
-        </mxCell>
-        <mxCell id="20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eefbff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent会话" vertex="1">
-          <mxGeometry height="74" width="180" x="710" y="880" as="geometry" />
-        </mxCell>
-        <mxCell id="21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eefbff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent消息" vertex="1">
-          <mxGeometry height="74" width="180" x="1150" y="750" as="geometry" />
-        </mxCell>
-        <mxCell id="22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffeef0;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="人工确认任务" vertex="1">
-          <mxGeometry height="74" width="180" x="1280" y="1030" as="geometry" />
-        </mxCell>
-        <mxCell id="23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eefbff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent运行证据" vertex="1">
-          <mxGeometry height="74" width="180" x="1670" y="880" as="geometry" />
-        </mxCell>
-        <mxCell id="24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#555555;align=left;verticalAlign=top;spacing=4;" value="说明：本图表达纯业务概念关系，不表达组件、接口、表结构或部署。Agent发布快照是Agent侧业务配置结果，不是Runtime内部快照。未选择本体实例时为通用Agent，不依赖Runtime。" vertex="1">
-          <mxGeometry height="70" width="1700" x="70" y="1120" as="geometry" />
-        </mxCell>
-        <mxCell id="25" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="管理能力定义 1:n">
+        <mxCell id="ov_e1" edge="1" parent="1" source="ov_def" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="ov_ver" value="1:n">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="26" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="形成版本 1:n">
+        <mxCell id="ov_e2" edge="1" parent="1" source="ov_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="ov_inst" value="1:n">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="27" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="6" value="被实例采用 1:n">
+        <mxCell id="ov_e3" edge="1" parent="1" source="ov_inst" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="ov_sess" value="1:n">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="28" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="6" value="包含实例 1:n">
+        <mxCell id="ov_e4" edge="1" parent="1" source="ov_sess" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="ov_msg" value="1:n">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="29" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="选择模式 n:1">
+        <mxCell id="ov_e5" edge="1" parent="1" source="ov_msg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="ov_evi" value="1:n">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="30" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="9" value="定义分类 1:n">
+        <mxCell id="ov_e6" edge="1" parent="1" source="ov_res" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="ov_inst" value="资源版本绑定">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="31" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="10" value="形成版本 1:n">
+        <mxCell id="ov_e7" edge="1" parent="1" source="ov_build" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="ov_inst" value="构建/发布治理">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="32" edge="1" parent="1" source="10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="11" value="授权范围 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="33" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="12" value="建立资源绑定 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="34" edge="1" parent="1" source="12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="10" value="指向资源版本 n:1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="35" edge="1" parent="1" source="13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="12" value="参与引用 0..n:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="36" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;exitX=0;exitY=1;exitDx=0;exitDy=0;curved=1;" target="14" value="可选本体绑定 1:0..1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1350" y="180" />
-              <mxPoint x="720" y="180" />
-              <mxPoint x="720" y="377" />
-              <mxPoint x="480" y="377" />
-            </Array>
-            <mxPoint x="1330" y="144" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="37" edge="1" parent="1" source="14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="15" value="指向本体实例 n:1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="38" edge="1" parent="1" source="12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="16" value="参与预检 n:1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="39" edge="1" parent="1" source="14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="16" value="本体增强预检 0..1:1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="40" edge="1" parent="1" source="16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="17" value="通过后生成快照 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="41" edge="1" parent="1" source="17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="18" value="形成发布单 1:1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="42" edge="1" parent="1" source="18" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="19" value="部署运行 n:1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1760" y="710" />
-              <mxPoint x="480" y="710" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="43" edge="1" parent="1" source="19" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="20" value="承载会话 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="44" edge="1" parent="1" source="20" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="21" value="包含消息 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="45" edge="1" parent="1" source="20" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;elbow=vertical;curved=1;" target="22" value="产生确认 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="46" edge="1" parent="1" source="21" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="23" value="形成证据 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="47" edge="1" parent="1" source="22" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="23" value="记录确认 1:n">
+        <mxCell id="ov_e8" edge="1" parent="1" source="ov_run" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="ov_evi" value="运行证据来源">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="02-Agent管理概念关系" id="aef85Kwk69j7KTIGEPBp">
-    <mxGraphModel dx="1487" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="780" background="#ffffff" math="0" shadow="0">
+  <diagram name="02-核心主线六表ER" id="uoghSilCi0r5HQAqjN4P">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="2200" pageHeight="1400" background="#FFFFFF" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent定义" vertex="1">
-          <mxGeometry height="74" width="180" x="80" y="90" as="geometry" />
+        <mxCell id="c_title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#60A5FA;strokeWidth=1;fontSize=15;fontStyle=1;align=center;verticalAlign=middle;" value="核心主线六表：先让定义、版本、实例、会话、消息、证据可理解、可维护" vertex="1">
+          <mxGeometry height="58" width="1880" x="80" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent版本" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="90" as="geometry" />
+        <mxCell id="c_def" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#818CF8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_definition Agent能力定义&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;tenant_id&lt;br/&gt;definition_code UK&lt;br/&gt;definition_name&lt;br/&gt;business_domain&lt;br/&gt;owner_user_id&lt;br/&gt;status&lt;br/&gt;description&lt;/font&gt;" vertex="1">
+          <mxGeometry height="250" width="310" x="100" y="190" as="geometry" />
         </mxCell>
-        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent策略" vertex="1">
-          <mxGeometry height="74" width="180" x="700" y="90" as="geometry" />
+        <mxCell id="c_ver" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#60A5FA;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_version Agent配置版本&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;definition_id FK&lt;br/&gt;version_no&lt;br/&gt;version_status&lt;br/&gt;config_payload&lt;br/&gt;snapshot_hash&lt;br/&gt;published_time&lt;br/&gt;status&lt;/font&gt;" vertex="1">
+          <mxGeometry height="250" width="320" x="500" y="190" as="geometry" />
         </mxCell>
-        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent生命周期事件" vertex="1">
-          <mxGeometry height="74" width="180" x="1010" y="90" as="geometry" />
+        <mxCell id="c_inst" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#34D399;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_instance Agent运行实例&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;version_id FK&lt;br/&gt;instance_code UK&lt;br/&gt;instance_name&lt;br/&gt;build_mode&lt;br/&gt;app_code / scene_code&lt;br/&gt;entry_code / visible_scope&lt;br/&gt;runtime_status&lt;/font&gt;" vertex="1">
+          <mxGeometry height="274" width="340" x="900" y="190" as="geometry" />
         </mxCell>
-        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent应用" vertex="1">
-          <mxGeometry height="74" width="180" x="80" y="380" as="geometry" />
+        <mxCell id="c_sess" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#F59E0B;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_session Agent会话&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;instance_id FK&lt;br/&gt;session_code&lt;br/&gt;channel&lt;br/&gt;user_ref&lt;br/&gt;session_status&lt;br/&gt;started_time&lt;br/&gt;ended_time&lt;/font&gt;" vertex="1">
+          <mxGeometry height="250" width="310" x="1320" y="190" as="geometry" />
         </mxCell>
-        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent实例" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="380" as="geometry" />
+        <mxCell id="c_msg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#F59E0B;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_message Agent消息&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;session_id FK&lt;br/&gt;message_role&lt;br/&gt;message_type&lt;br/&gt;content_summary&lt;br/&gt;evidence_profile&lt;br/&gt;trace_id&lt;br/&gt;created_time&lt;/font&gt;" vertex="1">
+          <mxGeometry height="250" width="320" x="100" y="650" as="geometry" />
         </mxCell>
-        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent发布" vertex="1">
-          <mxGeometry height="74" width="180" x="700" y="380" as="geometry" />
+        <mxCell id="c_evi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE7F3;strokeColor=#F472B6;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_evidence Agent运行证据&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;session_id FK nullable&lt;br/&gt;message_id FK nullable&lt;br/&gt;tool_call_id nullable&lt;br/&gt;hitl_task_id nullable&lt;br/&gt;evidence_type&lt;br/&gt;evidence_payload&lt;br/&gt;evidence_hash&lt;/font&gt;" vertex="1">
+          <mxGeometry height="274" width="360" x="520" y="650" as="geometry" />
         </mxCell>
-        <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent发布快照" vertex="1">
-          <mxGeometry height="74" width="180" x="1010" y="380" as="geometry" />
+        <mxCell id="c_rb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDFA;strokeColor=#2DD4BF;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_resource_binding 资源绑定&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;instance_id FK&lt;br/&gt;resource_id FK&lt;br/&gt;resource_version_id FK&lt;br/&gt;binding_scope&lt;br/&gt;binding_status&lt;/font&gt;" vertex="1">
+          <mxGeometry height="200" width="330" x="1040" y="650" as="geometry" />
         </mxCell>
-        <mxCell id="10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#555555;align=left;verticalAlign=top;spacing=4;" value="口径：Agent版本不等于Agent应用。版本表达能力蓝图演进，应用表达业务投放场景。" vertex="1">
-          <mxGeometry height="50" width="1200" x="80" y="650" as="geometry" />
+        <mxCell id="c_ob" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_ontology_binding 本体YAML实例绑定&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;instance_id FK&lt;br/&gt;ontology_id ref&lt;br/&gt;ontology_version ref&lt;br/&gt;yaml_hash&lt;br/&gt;binding_status&lt;br/&gt;仅本体增强Agent启用&lt;/font&gt;" vertex="1">
+          <mxGeometry height="226" width="360" x="1500" y="650" as="geometry" />
         </mxCell>
-        <mxCell id="11" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="形成版本 1:n">
+        <mxCell id="c_e1" edge="1" parent="1" source="c_def" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="c_ver" value="定义形成版本">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="12" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="被实例采用 1:n">
+        <mxCell id="c_e2" edge="1" parent="1" source="c_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="c_inst" value="版本被实例采用">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="13" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="包含实例 1:n">
+        <mxCell id="c_e3" edge="1" parent="1" source="c_inst" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="c_sess" value="实例产生会话">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="14" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="约束版本 1:n">
+        <mxCell id="c_e4" edge="1" parent="1" source="c_sess" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="c_msg" value="会话包含消息">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="15" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="8" value="发起发布 1:n">
+        <mxCell id="c_e5" edge="1" parent="1" source="c_msg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="c_evi" value="消息沉淀证据">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="16" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="9" value="形成快照 1:1">
+        <mxCell id="c_e6" edge="1" parent="1" source="c_inst" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="c_rb" value="绑定多个资源版本">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="17" edge="1" parent="1" source="8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="5" value="记录事件 1:n">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="790" y="350" />
-              <mxPoint x="1080" y="350" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram name="03-Agent实例概念关系" id="G5ZUGpi_aADV7LeQAq_n">
-    <mxGraphModel dx="1983" dy="973" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2050" pageHeight="1050" background="#ffffff" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent应用" vertex="1">
-          <mxGeometry height="74" width="180" x="70" y="70" as="geometry" />
-        </mxCell>
-        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent版本" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="70" as="geometry" />
-        </mxCell>
-        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3efff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent构建模式" vertex="1">
-          <mxGeometry height="74" width="180" x="710" y="70" as="geometry" />
-        </mxCell>
-        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eefbff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent运行证据" vertex="1">
-          <mxGeometry height="74" width="180" x="1030" y="70" as="geometry" />
-        </mxCell>
-        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eefbff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent消息" vertex="1">
-          <mxGeometry height="74" width="180" x="1350" y="70" as="geometry" />
-        </mxCell>
-        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent实例" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="380" as="geometry" />
-        </mxCell>
-        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent发布快照" vertex="1">
-          <mxGeometry height="74" width="180" x="1030" y="380" as="geometry" />
-        </mxCell>
-        <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eefbff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent会话" vertex="1">
-          <mxGeometry height="74" width="180" x="1350" y="380" as="geometry" />
-        </mxCell>
-        <mxCell id="10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源绑定" vertex="1">
-          <mxGeometry height="74" width="180" x="70" y="700" as="geometry" />
-        </mxCell>
-        <mxCell id="11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源版本" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="700" as="geometry" />
-        </mxCell>
-        <mxCell id="12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3efff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="本体绑定 可选" vertex="1">
-          <mxGeometry height="74" width="180" x="710" y="700" as="geometry" />
-        </mxCell>
-        <mxCell id="13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3efff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="本体实例" vertex="1">
-          <mxGeometry height="74" width="180" x="1030" y="700" as="geometry" />
-        </mxCell>
-        <mxCell id="14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffeef0;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="人工确认任务" vertex="1">
-          <mxGeometry height="74" width="180" x="1350" y="700" as="geometry" />
-        </mxCell>
-        <mxCell id="15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#555555;align=left;verticalAlign=top;spacing=4;" value="口径：不选择本体实例时仍可构建通用Agent；选择本体实例后才进入本体增强和Runtime合同链路。" vertex="1">
-          <mxGeometry height="50" width="1500" x="70" y="950" as="geometry" />
-        </mxCell>
-        <mxCell id="16" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="7" value="包含实例 1:n">
+        <mxCell id="c_e7" edge="1" parent="1" source="c_inst" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="c_ob" value="零个或一个本体绑定">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="17" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="作为版本 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="18" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="选择模式 n:1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="19" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="10" value="绑定资源 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="20" edge="1" parent="1" source="10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="11" value="指向版本 n:1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="21" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="12" value="可选绑定 1:0..1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="22" edge="1" parent="1" source="12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="13" value="指向本体 n:1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="23" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="8" value="发布快照 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="24" edge="1" parent="1" source="7" style="edgeStyle=isometricEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="9" value="产生会话 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="25" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="6" value="包含消息 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="26" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="5" value="形成证据 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="27" edge="1" parent="1" source="9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="14" value="产生确认 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="28" edge="1" parent="1" source="14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;curved=1;" target="5" value="记录确认 1:n">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1330" y="737" />
-              <mxPoint x="1330" y="350" />
-              <mxPoint x="1120" y="350" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram name="04-资源管理概念关系" id="fEwqDJL6RzelNZcrr607">
-    <mxGraphModel dx="1859" dy="913" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1050" background="#ffffff" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源类型" vertex="1">
-          <mxGeometry height="74" width="180" x="80" y="80" as="geometry" />
-        </mxCell>
-        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="80" as="geometry" />
-        </mxCell>
-        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源版本" vertex="1">
-          <mxGeometry height="74" width="180" x="700" y="80" as="geometry" />
-        </mxCell>
-        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源授权" vertex="1">
-          <mxGeometry height="74" width="180" x="1010" y="80" as="geometry" />
-        </mxCell>
-        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e9fff2;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent实例" vertex="1">
-          <mxGeometry height="74" width="180" x="700" y="700" as="geometry" />
-        </mxCell>
-        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源绑定" vertex="1">
-          <mxGeometry height="74" width="180" x="700" y="380" as="geometry" />
-        </mxCell>
-        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eefbff;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源使用记录" vertex="1">
-          <mxGeometry height="74" width="180" x="1010" y="380" as="geometry" />
-        </mxCell>
-        <mxCell id="9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7e8;strokeColor=#315a9f;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent资源生命周期事件" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="380" as="geometry" />
-        </mxCell>
-        <mxCell id="10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#555555;align=left;verticalAlign=top;spacing=4;" value="口径：资源可按类型区分，资源版本承载演进，资源绑定表达Agent实例实际使用哪个资源版本。" vertex="1">
-          <mxGeometry height="60" width="1300" x="80" y="900" as="geometry" />
-        </mxCell>
-        <mxCell id="11" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="2" value="属于类型 n:1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="12" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="形成版本 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="13" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="5" value="授予范围 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="14" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="建立绑定 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="15" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="绑定版本 n:1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="16" edge="1" parent="1" source="3" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="9" value="记录事件 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="17" edge="1" parent="1" source="6" style="edgeStyle=isometricEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="8" value="产生记录 1:n">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="18" edge="1" parent="1" source="4" style="edgeStyle=isometricEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;elbow=vertical;" target="8" value="被使用 1:n">
+        <mxCell id="c_e8" edge="1" parent="1" source="c_sess" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="c_evi" value="会话级证据">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="05-资源生命周期关系" id="wLlOBm6diE7SkOAa9AtH">
-    <mxGraphModel dx="1487" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="760" background="#ffffff" math="0" shadow="0">
+  <diagram name="03-资源管理核心ER" id="mToxt8zsVCnVcVVos1Nl">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="2200" pageHeight="1400" background="#FFFFFF" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="资源草稿" vertex="1">
-          <mxGeometry height="74" width="180" x="90" y="120" as="geometry" />
+        <mxCell id="r_title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCFBF1;strokeColor=#2DD4BF;strokeWidth=1;fontSize=15;fontStyle=1;align=center;verticalAlign=middle;" value="资源管理核心：统一资源主数据 + 资源版本 + 授权/健康/生命周期/使用追踪" vertex="1">
+          <mxGeometry height="58" width="1880" x="80" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="资源检查中" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="120" as="geometry" />
+        <mxCell id="r_res" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDFA;strokeColor=#2DD4BF;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_resource Agent自有资源主数据&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_code UK&lt;br/&gt;resource_name&lt;br/&gt;resource_type&lt;br/&gt;owner_user_id&lt;br/&gt;resource_status&lt;br/&gt;visibility_scope&lt;br/&gt;description&lt;/font&gt;" vertex="1">
+          <mxGeometry height="250" width="340" x="120" y="180" as="geometry" />
         </mxCell>
-        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="资源已发布" vertex="1">
-          <mxGeometry height="74" width="180" x="690" y="120" as="geometry" />
+        <mxCell id="r_ver" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDFA;strokeColor=#2DD4BF;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_resource_version Agent资源版本&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_id FK&lt;br/&gt;version_no&lt;br/&gt;version_status&lt;br/&gt;content_hash&lt;br/&gt;content_payload_ref&lt;br/&gt;published_time&lt;br/&gt;change_summary&lt;/font&gt;" vertex="1">
+          <mxGeometry height="250" width="350" x="560" y="180" as="geometry" />
         </mxCell>
-        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="资源已停用" vertex="1">
-          <mxGeometry height="74" width="180" x="990" y="120" as="geometry" />
+        <mxCell id="r_bind" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#34D399;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_resource_binding Agent资源绑定&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;instance_id FK&lt;br/&gt;resource_id FK&lt;br/&gt;resource_version_id FK&lt;br/&gt;binding_type&lt;br/&gt;binding_scope&lt;br/&gt;binding_status&lt;br/&gt;priority&lt;/font&gt;" vertex="1">
+          <mxGeometry height="274" width="360" x="1040" y="180" as="geometry" />
         </mxCell>
-        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="资源异常" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="420" as="geometry" />
+        <mxCell id="r_inst" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#34D399;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_instance Agent运行实例&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;version_id FK&lt;br/&gt;build_mode&lt;br/&gt;scene_code&lt;br/&gt;runtime_status&lt;/font&gt;" vertex="1">
+          <mxGeometry height="178" width="310" x="1520" y="180" as="geometry" />
         </mxCell>
-        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="资源已归档" vertex="1">
-          <mxGeometry height="74" width="180" x="990" y="420" as="geometry" />
+        <mxCell id="r_auth" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#818CF8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_resource_auth_scope 资源授权范围&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_id FK&lt;br/&gt;scope_type&lt;br/&gt;scope_ref_id&lt;br/&gt;permission_level&lt;br/&gt;effective_time&lt;br/&gt;expire_time&lt;/font&gt;" vertex="1">
+          <mxGeometry height="226" width="340" x="120" y="620" as="geometry" />
         </mxCell>
-        <mxCell id="8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#555555;align=left;verticalAlign=top;spacing=4;" value="说明：状态节点是业务状态概念，不是新增数据库表。" vertex="1">
-          <mxGeometry height="45" width="1100" x="90" y="630" as="geometry" />
+        <mxCell id="r_health" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=#FB923C;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_resource_health_check 资源健康检查&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_id FK&lt;br/&gt;resource_version_id FK&lt;br/&gt;check_type&lt;br/&gt;check_status&lt;br/&gt;error_code&lt;br/&gt;checked_time&lt;/font&gt;" vertex="1">
+          <mxGeometry height="226" width="350" x="560" y="620" as="geometry" />
         </mxCell>
-        <mxCell id="9" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="提交检查">
+        <mxCell id="r_life" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#F59E0B;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_resource_lifecycle_event 资源生命周期事件&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_id FK&lt;br/&gt;from_status&lt;br/&gt;to_status&lt;br/&gt;event_type&lt;br/&gt;operator_id&lt;br/&gt;event_time&lt;/font&gt;" vertex="1">
+          <mxGeometry height="226" width="360" x="1040" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="r_usage" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE7F3;strokeColor=#F472B6;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_resource_usage_trace 资源使用追踪&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;instance_id FK&lt;br/&gt;resource_version_id FK&lt;br/&gt;session_id nullable&lt;br/&gt;usage_type&lt;br/&gt;trace_id&lt;br/&gt;used_time&lt;/font&gt;" vertex="1">
+          <mxGeometry height="226" width="360" x="1520" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="r_ext" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_external_resource_ref 外部资源引用&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;external_system&lt;br/&gt;external_type&lt;br/&gt;external_id&lt;br/&gt;external_version&lt;br/&gt;external_hash&lt;br/&gt;health_status&lt;br/&gt;不保存正文和密钥&lt;/font&gt;" vertex="1">
+          <mxGeometry height="250" width="420" x="560" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="r_e1" edge="1" parent="1" source="r_res" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="r_ver" value="资源形成版本">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="10" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="检查通过发布">
+        <mxCell id="r_e2" edge="1" parent="1" source="r_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="r_bind" value="版本被绑定">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="11" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="6" value="检查失败">
+        <mxCell id="r_e3" edge="1" parent="1" source="r_inst" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="r_bind" value="实例绑定资源">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="12" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="2" value="修复后重提">
+        <mxCell id="r_e4" edge="1" parent="1" source="r_res" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="r_auth" value="资源授权">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="13" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="5" value="停用">
+        <mxCell id="r_e5" edge="1" parent="1" source="r_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="r_health" value="版本健康检查">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="14" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="重新启用">
+        <mxCell id="r_e6" edge="1" parent="1" source="r_res" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="r_life" value="状态变更">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="15" edge="1" parent="1" source="4" style="edgeStyle=isometricEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;elbow=vertical;" target="7" value="归档">
+        <mxCell id="r_e7" edge="1" parent="1" source="r_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="r_usage" value="使用追踪">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="16" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="停用后归档">
+        <mxCell id="r_e8" edge="1" parent="1" source="r_ext" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="r_res" value="外部引用摘要">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="06-Agent管理生命周期关系" id="AMtANUZ4uGc2w-xHxYQf">
-    <mxGraphModel dx="1487" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="760" background="#ffffff" math="0" shadow="0">
+  <diagram name="04-构建发布与本体可选绑定ER" id="VKjWGzPfROsV8PX9-jko">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="2200" pageHeight="1400" background="#FFFFFF" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="定义草稿" vertex="1">
-          <mxGeometry height="74" width="180" x="90" y="120" as="geometry" />
+        <mxCell id="b_title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1;fontSize=15;fontStyle=1;align=center;verticalAlign=middle;" value="构建发布边界：通用Agent不走Runtime，本体增强Agent才绑定本体YAML并调用Runtime合同" vertex="1">
+          <mxGeometry height="58" width="1880" x="80" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="定义启用" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="120" as="geometry" />
+        <mxCell id="b_note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=#FDBA74;strokeWidth=1;fontSize=12;spacing=10;align=left;verticalAlign=top;" value="表内不设计 runtime_snapshot_id。发布配置可保存 snapshotJson/snapshotHash，但这不是 Runtime 内部快照，也不是用户必须理解的强概念。" vertex="1">
+          <mxGeometry height="70" width="1880" x="80" y="120" as="geometry" />
         </mxCell>
-        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="版本已发布" vertex="1">
-          <mxGeometry height="74" width="180" x="690" y="120" as="geometry" />
+        <mxCell id="b_ver" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#60A5FA;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_version Agent配置版本&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;definition_id FK&lt;br/&gt;version_no&lt;br/&gt;config_payload&lt;br/&gt;snapshot_hash&lt;br/&gt;version_status&lt;/font&gt;" vertex="1">
+          <mxGeometry height="202" width="330" x="160" y="280" as="geometry" />
         </mxCell>
-        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="应用草稿" vertex="1">
-          <mxGeometry height="74" width="180" x="990" y="120" as="geometry" />
+        <mxCell id="b_inst" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#34D399;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_instance Agent运行实例&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;version_id FK&lt;br/&gt;build_mode&lt;br/&gt;scene_code&lt;br/&gt;entry_code&lt;br/&gt;visible_scope&lt;br/&gt;runtime_status&lt;/font&gt;" vertex="1">
+          <mxGeometry height="226" width="350" x="640" y="280" as="geometry" />
         </mxCell>
-        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="应用启用" vertex="1">
-          <mxGeometry height="74" width="180" x="1290" y="120" as="geometry" />
+        <mxCell id="b_ob" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_ontology_binding 本体YAML实例绑定&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;instance_id FK&lt;br/&gt;ontology_id ref&lt;br/&gt;ontology_version ref&lt;br/&gt;yaml_hash&lt;br/&gt;authorized_scope&lt;br/&gt;binding_status&lt;br/&gt;GENERAL_AGENT时不存在或停用&lt;/font&gt;" vertex="1">
+          <mxGeometry height="274" width="390" x="1180" y="220" as="geometry" />
         </mxCell>
-        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="Agent归档" vertex="1">
-          <mxGeometry height="74" width="180" x="690" y="420" as="geometry" />
+        <mxCell id="b_pre" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=#FB923C;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_preflight_report 构建预检报告&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;instance_id FK&lt;br/&gt;preflight_type&lt;br/&gt;preflight_status&lt;br/&gt;failed_reason&lt;br/&gt;checked_items&lt;br/&gt;checked_time&lt;/font&gt;" vertex="1">
+          <mxGeometry height="226" width="390" x="1180" y="620" as="geometry" />
         </mxCell>
-        <mxCell id="8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#555555;align=left;verticalAlign=top;spacing=4;" value="说明：本图表达Agent定义、版本、应用层面的业务状态迁移，不表达实例运行状态。" vertex="1">
-          <mxGeometry height="45" width="1200" x="90" y="630" as="geometry" />
+        <mxCell id="b_rel" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#F59E0B;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_release Agent发布单&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;instance_id FK&lt;br/&gt;version_id FK&lt;br/&gt;release_status&lt;br/&gt;release_payload&lt;br/&gt;snapshot_hash&lt;br/&gt;rollback_target_id&lt;br/&gt;published_time&lt;/font&gt;" vertex="1">
+          <mxGeometry height="274" width="390" x="160" y="620" as="geometry" />
         </mxCell>
-        <mxCell id="9" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="定义启用">
+        <mxCell id="b_ext" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;Runtime合同引用 非Agent主数据表&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;/api/runtime/ontology-list&lt;br/&gt;/api/runtime/ontology/{id}/yaml&lt;br/&gt;ObjectType query&lt;br/&gt;Action query / execute&lt;br/&gt;只在本体增强Agent分支启用&lt;/font&gt;" vertex="1">
+          <mxGeometry height="202" width="360" x="1660" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="b_e1" edge="1" parent="1" source="b_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="b_inst" value="实例采用版本">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="10" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="发布版本">
+        <mxCell id="b_e2" edge="1" parent="1" source="b_inst" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="b_ob" value="可选本体绑定">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="11" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="5" value="投放到应用">
+        <mxCell id="b_e3" edge="1" parent="1" source="b_inst" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="b_pre" value="预检报告">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="12" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="6" value="应用启用">
+        <mxCell id="b_e4" edge="1" parent="1" source="b_inst" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="b_rel" value="发布记录">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="13" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="版本归档">
+        <mxCell id="b_e5" edge="1" parent="1" source="b_ob" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="b_ext" value="选择本体后调用">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="14" edge="1" parent="1" source="6" style="edgeStyle=isometricEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="应用停用归档">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="15" edge="1" parent="1" source="3" style="edgeStyle=isometricEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;elbow=vertical;" target="7" value="定义归档">
+        <mxCell id="b_e6" edge="1" parent="1" source="b_rel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="b_ver" value="固化配置载荷/hash">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="07-Agent实例生命周期关系" id="tWQUVcfk3g2POZQdCCpr">
-    <mxGraphModel dx="1487" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="760" background="#ffffff" math="0" shadow="0">
+  <diagram name="05-运行治理候选ER" id="LvUqtGimOutfpPMvcKsi">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="2200" pageHeight="1400" background="#FFFFFF" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="实例草稿" vertex="1">
-          <mxGeometry height="74" width="180" x="40" y="120" as="geometry" />
+        <mxCell id="g_title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=#FB923C;strokeWidth=1;fontSize=15;fontStyle=1;align=center;verticalAlign=middle;" value="运行治理：请求粒度先由Trace/ToolCall/HITL/证据承载，不急于产品化为Agent运行请求强实体" vertex="1">
+          <mxGeometry height="58" width="1880" x="80" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="实例就绪" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="120" as="geometry" />
+        <mxCell id="g_sess" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#F59E0B;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_session Agent会话&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;instance_id FK&lt;br/&gt;session_status&lt;br/&gt;channel&lt;br/&gt;trace_root_id&lt;/font&gt;" vertex="1">
+          <mxGeometry height="178" width="320" x="120" y="180" as="geometry" />
         </mxCell>
-        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="部署中" vertex="1">
-          <mxGeometry height="74" width="180" x="710" y="306" as="geometry" />
+        <mxCell id="g_msg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#F59E0B;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_message Agent消息&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;session_id FK&lt;br/&gt;message_role&lt;br/&gt;message_type&lt;br/&gt;content_summary&lt;br/&gt;trace_id&lt;/font&gt;" vertex="1">
+          <mxGeometry height="202" width="330" x="560" y="180" as="geometry" />
         </mxCell>
-        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="运行中" vertex="1">
-          <mxGeometry height="74" width="180" x="920" y="620" as="geometry" />
+        <mxCell id="g_tool" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#60A5FA;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_tool_call Agent工具调用&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;message_id FK&lt;br/&gt;tool_code&lt;br/&gt;tool_version&lt;br/&gt;call_status&lt;br/&gt;input_digest&lt;br/&gt;output_digest&lt;br/&gt;trace_id&lt;/font&gt;" vertex="1">
+          <mxGeometry height="274" width="360" x="1020" y="180" as="geometry" />
         </mxCell>
-        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="实例异常" vertex="1">
-          <mxGeometry height="74" width="180" x="390" y="306" as="geometry" />
+        <mxCell id="g_hitl" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#A78BFA;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_hitl_task 人工确认任务&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;message_id FK&lt;br/&gt;tool_call_id nullable&lt;br/&gt;risk_level&lt;br/&gt;confirm_status&lt;br/&gt;approved_by&lt;br/&gt;timeout_time&lt;/font&gt;" vertex="1">
+          <mxGeometry height="250" width="360" x="1500" y="180" as="geometry" />
         </mxCell>
-        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e6;strokeColor=#b26a00;strokeWidth=1.5;fontSize=14;fontFamily=Microsoft YaHei;align=center;verticalAlign=middle;spacing=8;" value="已停止" vertex="1">
-          <mxGeometry height="74" width="180" x="710" y="480" as="geometry" />
+        <mxCell id="g_act" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#34D399;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_action_result 动作执行结果&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;hitl_task_id FK&lt;br/&gt;tool_call_id FK&lt;br/&gt;execute_status&lt;br/&gt;result_digest&lt;br/&gt;side_effect_ref&lt;br/&gt;executed_time&lt;/font&gt;" vertex="1">
+          <mxGeometry height="226" width="360" x="1500" y="620" as="geometry" />
         </mxCell>
-        <mxCell id="8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#555555;align=left;verticalAlign=top;spacing=4;" value="说明：实例预检按构建模式分支；通用Agent不走Runtime，本体增强Agent才走Runtime预检和调用链路。" vertex="1">
-          <mxGeometry height="45" width="1200" x="50" y="694" as="geometry" />
+        <mxCell id="g_evi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE7F3;strokeColor=#F472B6;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_evidence Agent运行证据&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;session_id/message_id&lt;br/&gt;tool_call_id/hitl_task_id&lt;br/&gt;evidence_type&lt;br/&gt;evidence_payload&lt;br/&gt;evidence_hash&lt;/font&gt;" vertex="1">
+          <mxGeometry height="226" width="360" x="1020" y="620" as="geometry" />
         </mxCell>
-        <mxCell id="9" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="预检通过">
+        <mxCell id="g_cost" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_cost_metric 成本指标候选&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;session_id/message_id&lt;br/&gt;model_code&lt;br/&gt;token_count&lt;br/&gt;cost_amount&lt;br/&gt;recorded_time&lt;/font&gt;" vertex="1">
+          <mxGeometry height="202" width="320" x="120" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="g_quality" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_quality_sample 质量样本候选&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;session_id/message_id&lt;br/&gt;sample_type&lt;br/&gt;score&lt;br/&gt;feedback_payload&lt;br/&gt;sample_time&lt;/font&gt;" vertex="1">
+          <mxGeometry height="202" width="330" x="560" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="g_e1" edge="1" parent="1" source="g_sess" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="g_msg" value="会话消息">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="10" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="发起部署">
+        <mxCell id="g_e2" edge="1" parent="1" source="g_msg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="g_tool" value="消息触发工具">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="11" edge="1" parent="1" source="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="5" value="健康通过">
+        <mxCell id="g_e3" edge="1" parent="1" source="g_tool" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="g_hitl" value="高风险需确认">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="12" edge="1" parent="1" source="4" style="edgeStyle=entityRelationEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;elbow=vertical;" target="6" value="部署失败">
+        <mxCell id="g_e4" edge="1" parent="1" source="g_hitl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="g_act" value="审批后执行">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="13" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="7" value="主动停止">
+        <mxCell id="g_e5" edge="1" parent="1" source="g_tool" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="g_evi" value="工具证据">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="14" edge="1" parent="1" source="5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;entryX=0.5;entryY=1;entryDx=0;entryDy=0;elbow=vertical;" target="6" value="健康失败">
+        <mxCell id="g_e6" edge="1" parent="1" source="g_act" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="g_evi" value="结果证据">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="15" edge="1" parent="1" source="6" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="3" value="修复后预检">
+        <mxCell id="g_e7" edge="1" parent="1" source="g_msg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="g_cost" value="成本统计">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="16" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="4" value="重新启动">
+        <mxCell id="g_e8" edge="1" parent="1" source="g_msg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="g_quality" value="质量反馈">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="17" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#444444;strokeWidth=1.5;endArrow=classic;fontSize=12;fontFamily=Microsoft YaHei;labelBackgroundColor=#ffffff;" target="2" value="配置变更退回">
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="06-资源明细候选域" id="BUu9hHohsO4On7cLAP8b">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="2300" pageHeight="1150" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="d_title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#94A3B8;strokeWidth=1;fontSize=15;fontStyle=1;align=center;verticalAlign=middle;" value="资源明细候选域：统一资源表是主线，强结构资源按复杂度再拆专表" vertex="1">
+          <mxGeometry height="58" width="1880" x="80" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d_note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1;fontSize=12;spacing=10;align=left;verticalAlign=top;" value="Prompt / RAG / Skill / Intent / MCP / Memory / Model / Vector / Graph / OutputTemplate / Evaluation / Policy 可以先由资源主数据与版本载荷承载；需要强查询、强约束、独立生命周期时再拆专表。" vertex="1">
+          <mxGeometry height="86" width="1880" x="80" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="d_res" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDFA;strokeColor=#2DD4BF;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_resource 统一资源主数据&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;resource_type 区分类型&lt;br/&gt;owner / status / visibility&lt;br/&gt;资源生命周期统一治理&lt;/font&gt;" vertex="1">
+          <mxGeometry height="154" width="360" x="900" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="d_ver" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDFA;strokeColor=#2DD4BF;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_resource_version 统一资源版本&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;version_no&lt;br/&gt;content_payload_ref&lt;br/&gt;content_hash&lt;br/&gt;发布与回滚依据&lt;/font&gt;" vertex="1">
+          <mxGeometry height="154" width="360" x="900" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="d_e1" edge="1" parent="1" source="d_res" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;" target="d_ver" value="资源形成版本">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_prompt" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_prompt_resource Prompt强结构候选&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_id FK&lt;br/&gt;resource_version_id FK&lt;br/&gt;专有结构字段&lt;br/&gt;仅复杂度满足时启用&lt;/font&gt;" vertex="1">
+          <mxGeometry height="166" width="300" x="120" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="d_prompt_e" edge="1" parent="1" source="d_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="d_prompt" value="版本载荷强结构化">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_rag" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_rag_resource RAG强结构候选&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_id FK&lt;br/&gt;resource_version_id FK&lt;br/&gt;专有结构字段&lt;br/&gt;仅复杂度满足时启用&lt;/font&gt;" vertex="1">
+          <mxGeometry height="166" width="300" x="120" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="d_rag_e" edge="1" parent="1" source="d_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="d_rag" value="版本载荷强结构化">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_skill" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_skill_resource Skill强结构候选&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_id FK&lt;br/&gt;resource_version_id FK&lt;br/&gt;专有结构字段&lt;br/&gt;仅复杂度满足时启用&lt;/font&gt;" vertex="1">
+          <mxGeometry height="166" width="300" x="120" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="d_skill_e" edge="1" parent="1" source="d_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="d_skill" value="版本载荷强结构化">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_intent" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_intent_resource Intent强结构候选&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_id FK&lt;br/&gt;resource_version_id FK&lt;br/&gt;专有结构字段&lt;br/&gt;仅复杂度满足时启用&lt;/font&gt;" vertex="1">
+          <mxGeometry height="166" width="300" x="520" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="d_intent_e" edge="1" parent="1" source="d_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="d_intent" value="版本载荷强结构化">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_mcp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_mcp_resource MCP强结构候选&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_id FK&lt;br/&gt;resource_version_id FK&lt;br/&gt;专有结构字段&lt;br/&gt;仅复杂度满足时启用&lt;/font&gt;" vertex="1">
+          <mxGeometry height="166" width="300" x="520" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="d_mcp_e" edge="1" parent="1" source="d_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="d_mcp" value="版本载荷强结构化">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_memory" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_memory_policy Memory策略候选&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_id FK&lt;br/&gt;resource_version_id FK&lt;br/&gt;专有结构字段&lt;br/&gt;仅复杂度满足时启用&lt;/font&gt;" vertex="1">
+          <mxGeometry height="166" width="300" x="520" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="d_memory_e" edge="1" parent="1" source="d_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="d_memory" value="版本载荷强结构化">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_model" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_model_resource Model强结构候选&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_id FK&lt;br/&gt;resource_version_id FK&lt;br/&gt;专有结构字段&lt;br/&gt;仅复杂度满足时启用&lt;/font&gt;" vertex="1">
+          <mxGeometry height="166" width="300" x="1420" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="d_model_e" edge="1" parent="1" source="d_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="d_model" value="版本载荷强结构化">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_vector" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_vector_resource Vector强结构候选&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_id FK&lt;br/&gt;resource_version_id FK&lt;br/&gt;专有结构字段&lt;br/&gt;仅复杂度满足时启用&lt;/font&gt;" vertex="1">
+          <mxGeometry height="166" width="300" x="1420" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="d_vector_e" edge="1" parent="1" source="d_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="d_vector" value="版本载荷强结构化">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_graph" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_graph_resource Graph强结构候选&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_id FK&lt;br/&gt;resource_version_id FK&lt;br/&gt;专有结构字段&lt;br/&gt;仅复杂度满足时启用&lt;/font&gt;" vertex="1">
+          <mxGeometry height="166" width="300" x="1420" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="d_graph_e" edge="1" parent="1" source="d_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="d_graph" value="版本载荷强结构化">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_tpl" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_output_template OutputTemplate候选&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_id FK&lt;br/&gt;resource_version_id FK&lt;br/&gt;专有结构字段&lt;br/&gt;仅复杂度满足时启用&lt;/font&gt;" vertex="1">
+          <mxGeometry height="166" width="300" x="1820" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="d_tpl_e" edge="1" parent="1" source="d_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="d_tpl" value="版本载荷强结构化">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_eval" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_evaluation_set Evaluation候选&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_id FK&lt;br/&gt;resource_version_id FK&lt;br/&gt;专有结构字段&lt;br/&gt;仅复杂度满足时启用&lt;/font&gt;" vertex="1">
+          <mxGeometry height="166" width="300" x="1820" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="d_eval_e" edge="1" parent="1" source="d_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="d_eval" value="版本载荷强结构化">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_policy" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;be_agent_policy_resource Policy候选&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;id PK&lt;br/&gt;resource_id FK&lt;br/&gt;resource_version_id FK&lt;br/&gt;专有结构字段&lt;br/&gt;仅复杂度满足时启用&lt;/font&gt;" vertex="1">
+          <mxGeometry height="166" width="300" x="1820" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="d_policy_e" edge="1" parent="1" source="d_ver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="d_policy" value="版本载荷强结构化">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="07-生命周期与降级边界" id="Ld_YH8fTpWOv81aUK_tM">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="2200" pageHeight="1400" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="l_title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#34D399;strokeWidth=1;fontSize=15;fontStyle=1;align=center;verticalAlign=middle;" value="生命周期与降级边界：状态是业务状态，不等于新增表" vertex="1">
+          <mxGeometry height="58" width="1880" x="80" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="l_res_life" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDFA;strokeColor=#2DD4BF;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;资源生命周期&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;草稿 DRAFT&lt;br/&gt;检查中 CHECKING&lt;br/&gt;已发布 PUBLISHED&lt;br/&gt;停用 DISABLED&lt;br/&gt;异常 ERROR&lt;br/&gt;归档 ARCHIVED&lt;/font&gt;" vertex="1">
+          <mxGeometry height="226" width="330" x="140" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="l_ver_life" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#60A5FA;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;Agent版本生命周期&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;定义草稿&lt;br/&gt;定义启用&lt;br/&gt;版本创建&lt;br/&gt;版本发布&lt;br/&gt;回滚到旧版本&lt;br/&gt;版本归档&lt;/font&gt;" vertex="1">
+          <mxGeometry height="226" width="330" x="560" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="l_inst_life" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#34D399;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;Agent实例生命周期&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;实例草稿&lt;br/&gt;预检中&lt;br/&gt;就绪&lt;br/&gt;运行中&lt;br/&gt;已停止&lt;br/&gt;异常&lt;br/&gt;修复后重检&lt;/font&gt;" vertex="1">
+          <mxGeometry height="250" width="330" x="980" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="l_demote" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=#FB923C;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;降级处理概念&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;Agent应用：实例场景字段&lt;br/&gt;发布快照：发布配置载荷/hash&lt;br/&gt;运行请求：Trace/Invocation/ToolCall/审计&lt;br/&gt;不进入当前产品主概念&lt;/font&gt;" vertex="1">
+          <mxGeometry height="226" width="440" x="1400" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="l_core" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE7F3;strokeColor=#F472B6;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;核心可维护持久化主线&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;be_agent_definition&lt;br/&gt;be_agent_version&lt;br/&gt;be_agent_instance&lt;br/&gt;be_agent_session&lt;br/&gt;be_agent_message&lt;br/&gt;be_agent_evidence&lt;/font&gt;" vertex="1">
+          <mxGeometry height="226" width="440" x="420" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="l_extend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;strokeWidth=1;fontSize=12;spacing=8;align=left;verticalAlign=top;" value="&lt;b&gt;扩展治理进入条件&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#475569&quot;&gt;独立审批比较&lt;br/&gt;独立SLA/计费&lt;br/&gt;独立运维查询&lt;br/&gt;独立权限授权&lt;br/&gt;独立生命周期和审计&lt;/font&gt;" vertex="1">
+          <mxGeometry height="202" width="440" x="1060" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="l_e1" edge="1" parent="1" source="l_demote" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="l_core" value="不污染主链">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l_e2" edge="1" parent="1" source="l_demote" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=ERmany;startArrow=ERone;fontSize=11;labelBackgroundColor=#FFFFFF;dashed=1;strokeColor=#94A3B8;endArrow=open;startArrow=none;" target="l_extend" value="满足条件再拆表">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>

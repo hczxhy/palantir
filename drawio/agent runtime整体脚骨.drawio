@@ -1,0 +1,807 @@
+<mxfile host="app.diagrams.net" pages="5">
+  <diagram id="hexAlN2oHGDvqy1o6bQE" name="整体架构图">
+    <mxGraphModel dx="1153" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1F4E78;" value="OD-Agent v10 端到端流程图（构建态 → 运行态 → 监控）&lt;br&gt;&amp;nbsp;| 独立端口 + HTTP 反腐适配层 | 7072 + 8080" vertex="1">
+          <mxGeometry height="60" width="1600" x="541" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#1F4E78;fontSize=12;fontStyle=1;verticalAlign=top;" value="用户" vertex="1">
+          <mxGeometry height="1380" width="280" x="181" y="538" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#B45F06;fontSize=12;fontStyle=1;verticalAlign=top;" value="前端8091 Chatbot-UI&lt;br&gt;(SSE + HITL 卡片)" vertex="1">
+          <mxGeometry height="1380" width="320" x="461" y="538" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#1F4E78;fontSize=12;fontStyle=1;verticalAlign=top;" value="OD-Agent 后端&lt;br&gt;be-scope-boot :7072&lt;br&gt;(本体建模 + 连接管理 + Agent 管理 + Agent 实例 +&amp;nbsp; AgentRuntime)" vertex="1">
+          <mxGeometry height="1380" width="920" x="781" y="538" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=12;fontStyle=1;verticalAlign=top;" value="刘龙腾 runtime&#xa;be-ontology-runtime :8080&#xa;(HTTP 反腐层外, 独立进程)" vertex="1">
+          <mxGeometry height="1380" width="440" x="1701" y="538" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontSize=12;fontStyle=1;verticalAlign=top;" value="业务系统18080&lt;br&gt;采购/SAP/Mock" vertex="1">
+          <mxGeometry height="1380" width="360" x="2141" y="538" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-7" parent="1" style="text;html=1;strokeColor=none;fillColor=#1F4E78;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#FFFFFF;" value="A. 构建态 (build-time) — 配置 + 本体建模 + 连接管理 + Agent 管理 + 实例" vertex="1">
+          <mxGeometry height="30" width="2320" x="181" y="508" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#1F4E78;fontSize=11;" value="A1 本体建模&#xa;高思纯 / 刘龙腾&#xa;建 ont_xxx → obj/act/link&#xa;→ 快照 + 调 /api/runtime/refresh" vertex="1">
+          <mxGeometry height="80" width="200" x="821" y="608" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#1F4E78;fontSize=11;" value="A2 连接管理&#xa;配置 Connector / Dataset / sys_connector&#xa;配置 InputMapper / OutputMapper" vertex="1">
+          <mxGeometry height="80" width="200" x="1041" y="608" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#1F4E78;fontSize=11;" value="A3 Agent 管理&lt;br&gt;be_agent_definition&lt;br&gt;be_agent_capability&lt;br&gt;prompt / skill / llm" vertex="1">
+          <mxGeometry height="80" width="200" x="1261" y="608" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#1F4E78;fontSize=11;" value="A4 Agent 实例&#xa;preflight(预检)&#xa;→ 启动 instance&#xa;→ 写 be_agent_instance" vertex="1">
+          <mxGeometry height="80" width="200" x="1481" y="608" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontSize=10;align=left;verticalAlign=top;dashed=1;" value="配置态持久化&lt;br&gt;be_agent_definition / be_agent_capability&lt;br&gt;be_agent_prompt / be_agent_skill / be_agent_initialize_log&lt;br&gt;be_agent_instance (C2) / be_agent_preflight_report (C1)&lt;br&gt;be_ontology_object / be_ontology_link / be_ontology_action" vertex="1">
+          <mxGeometry height="80" width="860" x="821" y="708" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=10;fontStyle=1;" value="POST /api/runtime/refresh/{ontologyId}&#xa;触发刘龙腾 runtime 缓存重载 ACTIVE 快照" vertex="1">
+          <mxGeometry height="80" width="360" x="1741" y="608" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-14" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#82B366;strokeWidth=2;" target="0u2WoVb9fmb_PlIgk6f5-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-15" parent="1" style="text;html=1;strokeColor=none;fillColor=#B45F06;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#FFFFFF;" value="B. 会话启动 — 用户在 Chatbot-UI 发起会话" vertex="1">
+          <mxGeometry height="30" width="2320" x="181" y="818" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#1F4E78;fontSize=11;" value="输入自然语言&#xa;&quot;查 S001 本周&#xa;应交付 PO 风险&quot;" vertex="1">
+          <mxGeometry height="60" width="200" x="221" y="868" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#B45F06;fontSize=10;" value="POST /api/od-agent/agent-instances/{id}/sessions&#xa;→ 拿到 sessionId&#xa;POST /api/od-agent/sessions/{sid}/messages:stream (SSE)" vertex="1">
+          <mxGeometry height="80" width="240" x="501" y="858" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;" value="AgentChatService&#xa;1. createSession → be_agent_session&#xa;2. createMessage → be_agent_message&#xa;3. createRun    → be_agent_run_record&#xa;4. 调 Orchestrator.start()" vertex="1">
+          <mxGeometry height="100" width="280" x="841" y="848" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-19" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-16" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#1F4E78;strokeWidth=2;" target="0u2WoVb9fmb_PlIgk6f5-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-20" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-17" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#1F4E78;strokeWidth=2;" target="0u2WoVb9fmb_PlIgk6f5-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-21" parent="1" style="text;html=1;strokeColor=none;fillColor=#1F4E78;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#FFFFFF;" value="C. AgentRuntime 流水线 (Lx AgentRuntimeOrchestrator 编排器)&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="2320" x="181" y="978" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1F4E78;strokeColor=#0E2841;fontSize=11;fontStyle=1;fontColor=#FFFFFF;align=left;verticalAlign=top;" value="Lx AgentRuntimeOrchestrator&#xa;生成 contextId (ctx_xxx)&#xa;调度 L1→L2→L4→[L3→L5]&#xa;发送 SSE 事件&#xa;HITL 暂停/恢复&#xa;写入 Evidence" vertex="1">
+          <mxGeometry height="120" width="260" x="921" y="1028" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;" value="L1 输入理解&#xa;RuntimeInputUnderstandingService&#xa;• normalizeInput (本周→2026-06-15~21)&#xa;• quickOntologyMatch (供应商/PO)&#xa;• extractSlots (S001, dateRange)&#xa;• calculateConfidence (0.91)&#xa;• buildRuntimeContextDraft&#xa;&#xa;写: be_agent_runtime_context.layer1_json&#xa;     (v12 D 段 TODO M11)" vertex="1">
+          <mxGeometry height="160" width="220" x="841" y="1178" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;" value="L2 本体推理&#xa;RuntimeOntologyReasoningService&#xa;• retrieveOntologyGraph (从缓存)&#xa;• inferBusinessObjects&#xa;• resolveDatasetAndActions&#xa;• validateConstraints&#xa;• buildExecutionContext&#xa;&#xa;写: be_agent_runtime_context.layer2_json&#xa;     + be_agent_runtime_stage_evidence (M13)" vertex="1">
+          <mxGeometry height="160" width="220" x="1081" y="1178" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE699;strokeColor=#D79B00;fontSize=10;align=left;verticalAlign=top;" value="L4 治理 Hook 横切层&#xa;GovernanceHookService&#xa;• preExecutionGate → GateDecision:&#xa;    ALLOW / REQUIRE_HITL / BLOCKED&#xa;• postExecutionAudit&#xa;&#xa;高风险 → 写 be_agent_hitl_task&#xa;所有 → 写 be_agent_runtime_audit_log" vertex="1">
+          <mxGeometry height="160" width="220" x="1321" y="1178" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;" value="L3 ReAct 业务执行&#xa;ReActExecutionService&#xa;Think → Act → Observe 循环&#xa;调用:&#xa;• RuntimeAdapter (HTTP 反腐)&#xa;• DatasetAdapter (直接/受控)&#xa;• ConnectorAdapter (受控执行)&#xa;&#xa;写: be_agent_runtime_tool_call&#xa;     + be_agent_action_result (B6)" vertex="1">
+          <mxGeometry height="160" width="220" x="1321" y="1368" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;" value="L5 输出管理&#xa;OutputManagementService&#xa;• validateAndFormatOutput&#xa;• 业务摘要 + 风险提示&#xa;• 结构化输出 (markdown + JSON)&#xa;• 不确定提示 / HITL 卡片&#xa;&#xa;关联: auditId + runId + contextId" vertex="1">
+          <mxGeometry height="160" width="220" x="1081" y="1368" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-28" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-18" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;entryX=0.5;strokeColor=#1F4E78;strokeWidth=2;fontSize=10;" target="0u2WoVb9fmb_PlIgk6f5-22" value="start(req)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-29" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-22" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.25;entryX=0.5;strokeColor=#1F4E78;strokeWidth=2;fontSize=10;" target="0u2WoVb9fmb_PlIgk6f5-23" value="runL1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-30" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-23" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#1F4E78;strokeWidth=2;fontSize=10;" target="0u2WoVb9fmb_PlIgk6f5-24" value="draft">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-31" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-24" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#1F4E78;strokeWidth=2;fontSize=10;" target="0u2WoVb9fmb_PlIgk6f5-25" value="ctx">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-32" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-25" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;entryX=0.5;strokeColor=#82B366;strokeWidth=2;fontSize=10;fontStyle=1;" target="0u2WoVb9fmb_PlIgk6f5-26" value="ALLOW">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-33" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-26" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;entryX=1;strokeColor=#1F4E78;strokeWidth=2;fontSize=10;" target="0u2WoVb9fmb_PlIgk6f5-27" value="result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-34" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-27" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.25;entryX=0.75;strokeColor=#1F4E78;strokeWidth=2;fontSize=10;dashed=1;" target="0u2WoVb9fmb_PlIgk6f5-22" value="output">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="841" y="1448" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-35" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=10;align=left;verticalAlign=top;" value="REQUIRE_HITL&#xa;→ 写 be_agent_hitl_task (B5)&#xa;→ 状态=HITL_PENDING&#xa;→ 前端展示卡片" vertex="1">
+          <mxGeometry height="80" width="120" x="1561" y="1218" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=10;align=left;verticalAlign=top;" value="BLOCKED&#xa;→ runtime.failed&#xa;→ 终止任务" vertex="1">
+          <mxGeometry height="60" width="120" x="1561" y="1318" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-37" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-25" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#B85450;strokeWidth=2;" target="0u2WoVb9fmb_PlIgk6f5-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-38" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-25" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#B85450;strokeWidth=2;" target="0u2WoVb9fmb_PlIgk6f5-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-39" parent="1" style="text;html=1;strokeColor=none;fillColor=#82B366;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#FFFFFF;" value="D. Runtime Adapter 反腐层 — L3 通过 HTTP 调刘龙腾 runtime (独立端口 8080)" vertex="1">
+          <mxGeometry height="30" width="2320" x="181" y="1568" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-40" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=10;align=left;verticalAlign=top;" value="RuntimeAdapterPort (接口)&#xa;• query()    — 结构查询 / Action Query&#xa;• execute() — Action Execute (写)&#xa;• listOntologies()&#xa;• getOntologyMetadata()" vertex="1">
+          <mxGeometry height="100" width="220" x="1321" y="1618" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-41" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=9;align=left;verticalAlign=top;" value="LiuRuntimeAdapter (实现)&#xa;mode=HTTP_CONTRACT (实调)&#xa;或 mode=CONTRACT_STUB (桩)&#xa;&#xa;BaseUrl = ${OD_RUNTIME_BASE_URL}&#xa; = http://172.19.3.101:8080&#xa;&#xa;Headers:&#xa;X-Contract-Version / X-Mapper-Version&#xa;Authorization / X-Sa-Token&#xa;X-Idempotency-Key" vertex="1">
+          <mxGeometry height="160" width="220" x="1321" y="1738" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-42" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=10;align=left;verticalAlign=top;" value="GET /api/runtime/ontology-list&#xa;→ 本体发现" vertex="1">
+          <mxGeometry height="60" width="180" x="1741" y="1590" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-43" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=10;align=left;verticalAlign=top;" value="GET /api/runtime/ontology/{id}&#xa;/object-types | /action-types&#xa;/link-types | /yaml" vertex="1">
+          <mxGeometry height="80" width="180" x="1741" y="1698" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-44" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=10;align=left;verticalAlign=top;" value="路径1: 对象查询&#xa;POST /object-types/{code}/query&#xa;→ Dataset (受控查询)" vertex="1">
+          <mxGeometry height="60" width="180" x="1741" y="1850" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-45" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=10;align=left;verticalAlign=top;" value="路径2: Action Query&#xa;POST /actions/{code}/query&#xa;→ ConnectorOperation (受控读)" vertex="1">
+          <mxGeometry height="60" width="180" x="1941" y="1618" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-46" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=10;align=left;verticalAlign=top;" value="路径3: Action Execute&#xa;POST /actions/{code}/execute&#xa;→ ConnectorOperation (受控写)&#xa;→ 业务系统 (采购/SAP/Mock)" vertex="1">
+          <mxGeometry height="80" width="180" x="1950" y="1710" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-47" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=10;align=left;verticalAlign=top;" value="POST /api/runtime/refresh/{id}&#xa;(配置态发布触发)" vertex="1">
+          <mxGeometry height="60" width="180" x="1950" y="1810" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-48" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontSize=10;" value="采购业务库&#xa;po / supplier / material&#xa;/ risk_event / notice" vertex="1">
+          <mxGeometry height="80" width="180" x="2231" y="1710" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-49" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-26" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;entryX=0.5;strokeColor=#1F4E78;strokeWidth=2;fontSize=10;" target="0u2WoVb9fmb_PlIgk6f5-40" value="reAct()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-50" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-40" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;entryX=0.5;strokeColor=#82B366;strokeWidth=2;fontSize=10;dashed=1;" target="0u2WoVb9fmb_PlIgk6f5-41" value="实现">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-51" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-41" style="edgeStyle=isometricEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#82B366;strokeWidth=2;" target="0u2WoVb9fmb_PlIgk6f5-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-52" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-41" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#82B366;strokeWidth=2;" target="0u2WoVb9fmb_PlIgk6f5-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-53" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-41" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#82B366;strokeWidth=2;" target="0u2WoVb9fmb_PlIgk6f5-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-54" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-41" style="edgeStyle=isometricEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#82B366;strokeWidth=2;elbow=vertical;" target="0u2WoVb9fmb_PlIgk6f5-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-55" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-41" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#B85450;strokeWidth=2;" target="0u2WoVb9fmb_PlIgk6f5-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-56" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-41" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#82B366;strokeWidth=2;dashed=1;" target="0u2WoVb9fmb_PlIgk6f5-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-57" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-46" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#B85450;strokeWidth=2;fontSize=10;" target="0u2WoVb9fmb_PlIgk6f5-48" value="受控写">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-58" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-44" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#82B366;strokeWidth=2;fontSize=10;" target="0u2WoVb9fmb_PlIgk6f5-48" value="受控读">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-59" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-45" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#82B366;strokeWidth=2;fontSize=10;" target="0u2WoVb9fmb_PlIgk6f5-48" value="受控读">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-60" parent="1" style="text;html=1;strokeColor=none;fillColor=#B85450;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#FFFFFF;" value="E. HITL 暂停 → 前端卡片 → 用户确认 → 恢复执行 (v11 §1.3.3 完整 HITL)" vertex="1">
+          <mxGeometry height="30" width="2320" x="181" y="1918" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-61" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#B45F06;fontSize=10;align=left;verticalAlign=top;" value="HITL 卡片 (前端 SSE)&#xa;event: runtime.hitl_pending&#xa;• hitlTaskId&#xa;• riskLevel (LOW/MED/HIGH/CRIT)&#xa;• actionCode (e.g. 催交通知)&#xa;• 动作预览 + 风险说明" vertex="1">
+          <mxGeometry height="120" width="220" x="481" y="1968" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-62" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#1F4E78;fontSize=11;" value="用户&#xa;Approve / Reject" vertex="1">
+          <mxGeometry height="60" width="200" x="221" y="1988" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-63" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=10;align=left;verticalAlign=top;" value="POST /api/od-agent/agent-runtime/hitl/{ctx}/approve&#xa;→ Orchestrator.approveHitl(ctx, hitlTaskId)&#xa;→ 写 be_agent_hitl_task.task_status=APPROVED&#xa;→ 写 be_agent_runtime_audit_log (HITL_APPROVED)" vertex="1">
+          <mxGeometry height="100" width="280" x="841" y="1968" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-64" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=10;align=left;verticalAlign=top;" value="POST /api/od-agent/agent-runtime/hitl/{ctx}/reject&#xa;→ 写 task_status=REJECTED&#xa;→ 终止 Runtime 流水线" vertex="1">
+          <mxGeometry height="80" width="280" x="841" y="2088" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-65" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;" value="恢复 → L3 ReAct 继续&#xa;使用原 contextId 恢复 (不允许新请求)&#xa;写 be_agent_runtime_stage_evidence (M13)" vertex="1">
+          <mxGeometry height="100" width="220" x="1161" y="1968" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-66" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-62" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#1F4E78;strokeWidth=2;" target="0u2WoVb9fmb_PlIgk6f5-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-67" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-61" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#82B366;strokeWidth=2;fontSize=10;" target="0u2WoVb9fmb_PlIgk6f5-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-68" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-61" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#B85450;strokeWidth=2;fontSize=10;" target="0u2WoVb9fmb_PlIgk6f5-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-69" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-63" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;entryX=0;strokeColor=#82B366;strokeWidth=2;fontSize=10;" target="0u2WoVb9fmb_PlIgk6f5-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-70" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-65" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;entryX=0.5;strokeColor=#82B366;strokeWidth=2;fontSize=10;dashed=1;" target="0u2WoVb9fmb_PlIgk6f5-26" value="从 L3 继续">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1421" y="1888" />
+              <mxPoint x="1421" y="1888" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-71" parent="1" style="text;html=1;strokeColor=none;fillColor=#666666;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#FFFFFF;" value="F. 监控 / 链路查询日志 — 前端诊断面板 + DBA 审计" vertex="1">
+          <mxGeometry height="30" width="2320" x="181" y="2218" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-72" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;" value="会话列表&#xa;GET /api/od-agent/agent-instances/{id}/sessions&#xa;→ be_agent_session (B1)" vertex="1">
+          <mxGeometry height="70" width="220" x="221" y="2268" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-73" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;" value="消息时间线&#xa;GET /api/od-agent/sessions/{id}/messages&#xa;→ be_agent_message (B2)" vertex="1">
+          <mxGeometry height="70" width="220" x="461" y="2268" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-74" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;" value="运行详情&#xa;GET /api/od-agent/runs/{id}&#xa;→ be_agent_run_record (B3)&#xa;  + run_summary (plan_actions)&#xa;  + ontology_yaml_instance_id" vertex="1">
+          <mxGeometry height="90" width="220" x="701" y="2268" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-75" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;" value="证据抽屉&#xa;GET /api/od-agent/runs/{id}/evidence&#xa;→ be_agent_evidence (B4)&#xa;类型: HITL_xxx / RUNTIME_ACTION_EXECUTE&#xa;     DATASET_QUERY / CONNECTOR_CALL / LLM_CALL" vertex="1">
+          <mxGeometry height="100" width="260" x="941" y="2268" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-76" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE699;strokeColor=#D79B00;fontSize=10;align=left;verticalAlign=top;" value="Runtime Trace Timeline&#xa;→ be_agent_runtime_trace_event (D2)&#xa;事件: L1_START / L1_END / L2_END /&#xa;  HITL_CREATED / HITL_APPROVED /&#xa;  L3_END / L5_END / ERROR" vertex="1">
+          <mxGeometry height="100" width="260" x="1221" y="2268" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-77" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=10;align=left;verticalAlign=top;" value="治理审计&#xa;→ be_agent_runtime_audit_log (D4)&#xa;→ be_agent_hitl_task (B5) 状态分布&#xa;→ 风险等级 + 操作者" vertex="1">
+          <mxGeometry height="100" width="260" x="1501" y="2268" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-78" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;" value="成本 / 配额&#xa;→ be_agent_cost_summary&#xa;  (按 agent/tenant 聚合)&#xa;→ be_agent_quota_policy" vertex="1">
+          <mxGeometry height="100" width="220" x="1781" y="2268" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-79" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F0FE;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;" value="实例健康&#xa;→ be_agent_instance (C2)&#xa;  last_heartbeat_time&#xa;  health_status" vertex="1">
+          <mxGeometry height="100" width="220" x="2021" y="2268" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-80" edge="1" parent="1" source="0u2WoVb9fmb_PlIgk6f5-17" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;entryX=0.5;strokeColor=#666666;strokeWidth=1;dashed=1;fontSize=10;" target="0u2WoVb9fmb_PlIgk6f5-72" value="前端诊断面板拉取">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="621" y="938" />
+              <mxPoint x="331" y="938" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-81" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F4E78;strokeColor=#1F4E78;fontSize=12;fontStyle=1;fontColor=#FFFFFF;verticalAlign=top;" value="图例" vertex="1">
+          <mxGeometry height="180" width="2320" x="181" y="2418" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-82" parent="1" style="text;html=1;align=left;fontSize=12;fontStyle=1;fontColor=#FFFFFF;" value="图例" vertex="1">
+          <mxGeometry height="20" width="200" x="201" y="2428" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-83" parent="1" style="text;html=1;align=left;fontSize=10;" value="A. 构建态 — 5 个配置域 (本体/连接/Agent/实例) + 配置态持久化" vertex="1">
+          <mxGeometry height="20" width="600" x="201" y="2453" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-84" parent="1" style="text;html=1;align=left;fontSize=10;" value="B. 会话启动 — 7072 /api/od-agent 接收 SSE 流式请求" vertex="1">
+          <mxGeometry height="20" width="600" x="201" y="2473" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-85" parent="1" style="text;html=1;align=left;fontSize=10;" value="C. 5+1 Runtime 流水线 (Lx 编排器) — v11 评审定版, 写 18 张 v12 表" vertex="1">
+          <mxGeometry height="20" width="600" x="201" y="2493" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-86" parent="1" style="text;html=1;align=left;fontSize=10;" value="D. Runtime Adapter 反腐层 — L3 调独立 8080 进程的刘龙腾 runtime (3 路径 + 1 刷新 + 1 列表)" vertex="1">
+          <mxGeometry height="20" width="600" x="201" y="2513" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-87" parent="1" style="text;html=1;align=left;fontSize=10;" value="E. HITL 暂停→卡片→approve/reject→用原 contextId 恢复" vertex="1">
+          <mxGeometry height="20" width="600" x="201" y="2533" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-88" parent="1" style="text;html=1;align=left;fontSize=10;" value="F. 监控 / 链路查询 — 7 类诊断接口, 全链路可追溯" vertex="1">
+          <mxGeometry height="20" width="600" x="201" y="2553" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-89" parent="1" style="text;html=1;align=left;fontSize=10;fontStyle=1;" value="颜色规范: 🟦蓝=OD-Agent 7072 | 🟨黄=前端 | 🟩绿=刘龙腾 runtime 8080 | 🟧橙=HITL/告警 | 🟥红=阻断/拒绝 | 灰=业务/库" vertex="1">
+          <mxGeometry height="20" width="900" x="841" y="2453" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-90" parent="1" style="text;html=1;align=left;fontSize=10;fontStyle=1;" value="边规范: 实线=同步调用, 虚线=异步/SSE/反向回溯, 红=阻断/写, 绿=放行/读" vertex="1">
+          <mxGeometry height="20" width="900" x="841" y="2473" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-91" parent="1" style="text;html=1;align=left;fontSize=10;fontStyle=1;fontColor=#1F4E78;" value="v12 数据: A 配置(5表) + B 会话(6表) + C 监控(2表) + D 持久化(5表) = 18 张 be_agent_ 物理表" vertex="1">
+          <mxGeometry height="20" width="900" x="841" y="2493" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-92" parent="1" style="text;html=1;align=left;fontSize=10;fontStyle=1;fontColor=#D79B00;" value="TODO 标记: D 段 5 张表(be_agent_runtime_*) 在 v12 DDL 已建, Orchestrator M11-M15 PR 接线" vertex="1">
+          <mxGeometry height="20" width="900" x="841" y="2513" as="geometry" />
+        </mxCell>
+        <mxCell id="0u2WoVb9fmb_PlIgk6f5-93" parent="1" style="text;html=1;align=left;fontSize=10;fontStyle=1;fontColor=#B85450;" value="不属于 OD-Agent: 5 张 be_ontology_* (刘龙腾, 不重构) / 6 张纯 PDMA 文档遗留" vertex="1">
+          <mxGeometry height="20" width="900" x="841" y="2533" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="IjQgV-wJYTpsLaslatoG" name="第 2 页">
+    <mxGraphModel dx="2656" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1F4E78;" value="OD-Agent v10 端口调用链路架构图&#xa;8091 → 7072 → 8081 → 8080 → 18080" vertex="1">
+          <mxGeometry height="60" width="1600" x="-80" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F4E78;strokeColor=#1F4E78;fontSize=13;fontStyle=1;fontColor=#FFFFFF;verticalAlign=middle;" value="端口 / 物理进程" vertex="1">
+          <mxGeometry height="60" width="180" x="214" y="571" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#B45F06;fontSize=13;fontStyle=1;verticalAlign=middle;" value=":8091&#xa;前端" vertex="1">
+          <mxGeometry height="120" width="180" x="214" y="651" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#1F4E78;fontSize=13;fontStyle=1;verticalAlign=middle;" value=":7072&#xa;OD-Agent 主服务&#xa;(be-scope-boot)" vertex="1">
+          <mxGeometry height="160" width="180" x="214" y="831" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=13;fontStyle=1;verticalAlign=middle;" value=":8081~:8099&#xa;Agent Runner 实例&#xa;(be-agent-runner)" vertex="1">
+          <mxGeometry height="160" width="180" x="214" y="1051" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=13;fontStyle=1;verticalAlign=middle;" value=":8080&#xa;本体 Runtime&#xa;(be-ontology-runtime&#xa;刘龙腾禁区)" vertex="1">
+          <mxGeometry height="160" width="180" x="214" y="1271" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontSize=13;fontStyle=1;verticalAlign=middle;" value=":18080&#xa;业务系统&#xa;(采购/SAP/数据源)" vertex="1">
+          <mxGeometry height="120" width="180" x="214" y="1491" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#B45F06;fontSize=11;align=left;verticalAlign=top;" value="前端 Chatbot-UI&#xa;web-ele (Vue 3 + Element Plus)&#xa;&#xa;• 入口路径：Nginx 反向代理到 :8091&#xa;• 用户登录 / 会话视图 / 消息流&#xa;• SSE 长连接接收 runtime.* 事件&#xa;• HITL 卡片渲染 (Approve/Reject)" vertex="1">
+          <mxGeometry height="120" width="380" x="474" y="651" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-9" edge="1" parent="1" source="0KoH8QsdyskSXtqt2C2q-8" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#B45F06;strokeWidth=3;fontSize=10;fontStyle=1;" target="0KoH8QsdyskSXtqt2C2q-10" value="HTTPS / SSE&#xa;POST /api/od-agent/agent-instances/{id}/sessions&#xa;POST /api/od-agent/sessions/{sid}/messages:stream&#xa;GET  /api/od-agent/sessions/{sid}/messages">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#1F4E78;fontSize=11;align=left;verticalAlign=top;" value="OD-Agent 主服务 (be-scope-boot :7072)&#xa;&#xa;• AgentChatService：会话/消息/Run 创建&#xa;• Lx AgentRuntimeOrchestrator：5+1 Runtime 编排&#xa;• 18 张 be_agent_* 表持久化&#xa;• RuntimeAdapter 反腐层（HTTP 调 8080）&#xa;• GovernanceHookService 治理三态" vertex="1">
+          <mxGeometry height="160" width="380" x="474" y="831" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F4E78;fontSize=10;" value="L1&#xa;输入理解" vertex="1">
+          <mxGeometry height="40" width="80" x="894" y="841" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F4E78;fontSize=10;" value="L2&#xa;本体推理" vertex="1">
+          <mxGeometry height="40" width="80" x="894" y="891" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F4E78;fontSize=10;" value="Gate&#xa;就绪门" vertex="1">
+          <mxGeometry height="40" width="80" x="894" y="941" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE699;strokeColor=#D79B00;fontSize=10;" value="L4&#xa;治理Hook" vertex="1">
+          <mxGeometry height="40" width="80" x="984" y="841" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F4E78;fontSize=10;" value="L3&#xa;ReAct执行" vertex="1">
+          <mxGeometry height="40" width="80" x="984" y="891" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F4E78;fontSize=10;" value="L5&#xa;输出管理" vertex="1">
+          <mxGeometry height="40" width="80" x="984" y="941" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-17" edge="1" parent="1" source="0KoH8QsdyskSXtqt2C2q-10" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#1F4E78;strokeWidth=3;fontSize=10;fontStyle=1;" target="0KoH8QsdyskSXtqt2C2q-18" value="RPC / HTTP&#xa;POST /api/runner/{runnerId}/execute&#xa;Runner 进程内：Think → Act → Observe 循环&#xa;调 RuntimeAdapter（L3 内部）">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=11;align=left;verticalAlign=top;" value="Agent Runner 实例 (be-agent-runner :8081)&#xa;&#xa;• 独立 JVM 进程（每实例一个端口 8081-8099）&#xa;• 启动参数 --agent.runtime.base-url 指向 :8080&#xa;• 接收 7072 委派的 ReAct 执行任务&#xa;• 调用 RuntimeAdapter（HTTP 反腐层）&#xa;• 执行结果回写 7072 持久化" vertex="1">
+          <mxGeometry height="160" width="380" x="474" y="1051" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;fontSize=10;" value="RuntimeAdapter&#xa;(HTTP 反腐层)" vertex="1">
+          <mxGeometry height="40" width="120" x="894" y="1061" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;fontSize=10;" value="AgentScope&#xa;Java v2" vertex="1">
+          <mxGeometry height="40" width="120" x="894" y="1111" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;fontSize=10;" value="Think Service&#xa;(LLM 调用)" vertex="1">
+          <mxGeometry height="40" width="120" x="894" y="1161" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-22" edge="1" parent="1" source="0KoH8QsdyskSXtqt2C2q-18" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#82B366;strokeWidth=3;fontSize=10;fontStyle=1;" target="0KoH8QsdyskSXtqt2C2q-23" value="HTTP 防腐层调用&#xa;POST /api/runtime/ontology-list&#xa;POST /api/runtime/ontology/{id}&#xa;POST /object-types/{code}/query&#xa;POST /actions/{code}/query | /actions/{code}/execute&#xa;Authorization / X-Sa-Token / X-Idempotency-Key">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=11;align=left;verticalAlign=top;" value="本体 Runtime (be-ontology-runtime :8080)&#xa;&#xa;⚠ 刘龙腾负责（禁区：不可修改）&#xa;&#xa;• 提供 ontology-list / ontology/{id} 元数据查询&#xa;• 3 类路径：对象查询 / Action Query / Action Execute&#xa;• 内置 Dataset / ConnectorOperation 注册表&#xa;• 命中后通过受控通道访问业务库" vertex="1">
+          <mxGeometry height="160" width="380" x="474" y="1271" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D79B00;fontSize=10;" value="ontology-list&#xa;ontology/{id}" vertex="1">
+          <mxGeometry height="40" width="120" x="894" y="1281" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D79B00;fontSize=10;" value="object-types/&#xa;query (受控读)" vertex="1">
+          <mxGeometry height="40" width="120" x="894" y="1331" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=10;" value="actions/query&#xa;actions/execute" vertex="1">
+          <mxGeometry height="40" width="120" x="894" y="1381" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-27" edge="1" parent="1" source="0KoH8QsdyskSXtqt2C2q-23" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#B85450;strokeWidth=3;fontSize=10;fontStyle=1;" target="0KoH8QsdyskSXtqt2C2q-28" value="受控读 / 受控写&#xa;Dataset 直连 (有缓存)&#xa;ConnectorOperation 受控执行 (HITL 后)&#xa;事务边界：ConnectorAdapter 内部">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-28" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontSize=11;align=left;verticalAlign=top;" value="业务系统 (:18080)&#xa;&#xa;• 采购业务库：po / supplier / material / risk_event&#xa;• SAP / ERP / 内部业务接口&#xa;• 数据源（只读快照 / 实时查询）&#xa;• 通知通道（邮件 / IM / 工单）&#xa;&#xa;⚠ 不在 OD-Agent 治理范围（仅受控调用）" vertex="1">
+          <mxGeometry height="120" width="380" x="474" y="1491" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-29" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;fontSize=10;align=left;verticalAlign=top;dashed=1;" value="⚡ HTTP 反腐层&#xa;（RuntimeAdapter）&#xa;&#xa;• 封装 8080 调用细节&#xa;• 不允许 7072/8081 直连 18080&#xa;• 统一鉴权 + 重试 + 幂等键&#xa;• 失败降级到 CONTRACT_STUB" vertex="1">
+          <mxGeometry height="100" width="260" x="1074" y="1051" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-30" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;dashed=1;" value="📌 端口清单与归属&#xa;&#xa;:8091  前端入口 (Nginx / Vite)&#xa;:7072  be-scope-boot (主服务)&#xa;:8081~:8099  be-agent-runner (实例)&#xa;:8080  be-ontology-runtime (刘龙腾)&#xa;:18080  业务系统 (不在治理范围)&#xa;&#xa;⚠ :8091/.101 不是直连，必须经 7072 中转" vertex="1">
+          <mxGeometry height="180" width="260" x="1074" y="651" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-31" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE699;strokeColor=#D79B00;fontSize=10;align=left;verticalAlign=top;dashed=1;" value="🛡 L4 治理 Hook 横切&#xa;&#xa;GateDecision 三态：&#xa;• ALLOW（绿）→ 进入 L3&#xa;• REQUIRE_HITL（橙）→ 暂停+卡片&#xa;• BLOCKED（红）→ 终止&#xa;&#xa;所有决策落 Audit + HITL 表" vertex="1">
+          <mxGeometry height="100" width="260" x="1074" y="1171" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-32" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#B45F06;fontSize=10;align=left;verticalAlign=top;dashed=1;" value="🚦 HITL 闭环&#xa;&#xa;L4 REQUIRE_HITL → 前端 SSE 卡片&#xa;→ 用户 Approve → POST /hitl/approve&#xa;→ 用原 contextId 恢复 L3&#xa;→ 续走 8081→8080→18080" vertex="1">
+          <mxGeometry height="100" width="260" x="1074" y="1291" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-33" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;dashed=1;" value="💾 18 张表持久化（在 :7072 MySQL）&#xa;&#xa;A 配置态 5 表&#xa;B 会话态 6 表&#xa;C 监控态 2 表&#xa;D Runtime 5 表 (M11-M15)" vertex="1">
+          <mxGeometry height="100" width="260" x="1074" y="1411" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-34" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#666666;fontSize=10;align=left;verticalAlign=top;dashed=1;" value="❌ 错误处理约定&#xa;&#xa;• 401 → 跳转登录&#xa;• 403 → 提示无权限&#xa;• 500 → 服务降级&#xa;• 业务 code≠0 → 显示 message&#xa;• Runtime 异常 → L4 治理" vertex="1">
+          <mxGeometry height="100" width="260" x="1074" y="1531" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-35" edge="1" parent="1" source="0KoH8QsdyskSXtqt2C2q-28" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;entryX=1;entryY=0.5;strokeColor=#666666;strokeWidth=1;dashed=1;fontSize=10;endArrow=blockThin;" target="0KoH8QsdyskSXtqt2C2q-10" value="↑ 业务结果回流">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="444" y="1551" />
+              <mxPoint x="444" y="911" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-36" edge="1" parent="1" source="0KoH8QsdyskSXtqt2C2q-10" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.25;entryX=0;entryY=0.5;strokeColor=#B45F06;strokeWidth=1;dashed=1;fontSize=10;endArrow=blockThin;" target="0KoH8QsdyskSXtqt2C2q-8" value="↑ SSE 流式输出">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="444" y="871" />
+              <mxPoint x="444" y="711" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-37" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F4E78;strokeColor=#1F4E78;fontSize=12;fontStyle=1;fontColor=#FFFFFF;verticalAlign=top;" value="图例" vertex="1">
+          <mxGeometry height="160" width="2240" x="214" y="1691" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-38" parent="1" style="text;html=1;align=left;fontSize=12;fontStyle=1;fontColor=#FFFFFF;" value="📋 图例 / Legend" vertex="1">
+          <mxGeometry height="20" width="200" x="234" y="1701" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-39" parent="1" style="text;html=1;align=left;fontSize=10;fontColor=#FFFFFF;" value="🔗 链路规范&#xa;8091 → 7072 → 8081 → 8080 → 18080&#xa;正向实线（蓝/绿/橙/红）= 同步调用，逐层下沉&#xa;反向虚线（灰/橙）= 业务结果 / SSE 流回流" vertex="1">
+          <mxGeometry height="80" width="380" x="234" y="1726" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-40" parent="1" style="text;html=1;align=left;fontSize=10;fontColor=#FFFFFF;" value="🎨 颜色规范&#xa;🟦 蓝（:7072）= OD-Agent 主服务&#xa;🟨 黄（:8091）= 前端 UI&#xa;🟩 绿（:8081）= Agent Runner 实例&#xa;🟧 橙（:8080）= 刘龙腾 runtime 禁区&#xa;⬜ 灰（:18080）= 业务系统（不在治理范围）" vertex="1">
+          <mxGeometry height="80" width="420" x="654" y="1726" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-41" parent="1" style="text;html=1;align=left;fontSize=10;fontColor=#FFFFFF;" value="➡ 边颜色规范&#xa;🟦 蓝粗线 = 7072→8081 委派调用&#xa;🟩 绿粗线 = 8081→8080 HTTP 反腐调用&#xa;🟧 橙粗线 = 8091→7072 HTTPS/SSE&#xa;🟥 红粗线 = 8080→18080 受控写（HITL 后）&#xa;⬜ 灰虚线 = 反向回流（结果/SSE）" vertex="1">
+          <mxGeometry height="80" width="440" x="1114" y="1726" as="geometry" />
+        </mxCell>
+        <mxCell id="0KoH8QsdyskSXtqt2C2q-42" parent="1" style="text;html=1;align=left;fontSize=10;fontColor=#FFFFFF;" value="⚠ 硬性规则&#xa;❌ 不允许 7072/8081 直连 18080（必须经 8080）&#xa;❌ 不允许 8091 直连 8081/8080（必须经 7072）&#xa;❌ 不允许修改 be-ontology-runtime 目录（刘龙腾禁区）&#xa;❌ 不允许写硬编码 IP/端口/模型名/业务词&#xa;✅ 一切跨进程调用走 HTTP 反腐层 + 鉴权" vertex="1">
+          <mxGeometry height="80" width="480" x="1594" y="1726" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="KYikwL-d8P0E6ngyO1FC" name="第 3 页">
+    <mxGraphModel dx="1487" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="i4M7rR2AzCevVuCarbud-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1F4E78;" value="OD-Agent v10 五层架构与实现状态图&#xa;调用链 8091 - 7072 - 8081 - 8080 - 18080" vertex="1">
+          <mxGeometry height="60" width="2000" x="621" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F4E78;strokeColor=#1F4E78;fontSize=12;fontStyle=1;fontColor=#FFFFFF;verticalAlign=middle;" value="端口 / 进程" vertex="1">
+          <mxGeometry height="50" width="160" x="361" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#B45F06;fontSize=11;fontStyle=1;verticalAlign=middle;" value="端口 8091 前端入口" vertex="1">
+          <mxGeometry height="70" width="160" x="361" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#1F4E78;fontSize=11;fontStyle=1;verticalAlign=middle;" value="端口 7072&#xa;be-scope-boot&#xa;OD-Agent 主服务" vertex="1">
+          <mxGeometry height="1000" width="160" x="361" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=11;fontStyle=1;verticalAlign=middle;" value="端口 8081-8099&#xa;be-agent-runner&#xa;Agent 实例引擎" vertex="1">
+          <mxGeometry height="100" width="160" x="361" y="1780" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=11;fontStyle=1;verticalAlign=middle;" value="端口 8080 刘龙腾 Runtime（禁区）" vertex="1">
+          <mxGeometry height="90" width="160" x="361" y="1900" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontSize=11;fontStyle=1;verticalAlign=middle;" value="端口 18080 业务系统" vertex="1">
+          <mxGeometry height="70" width="160" x="361" y="2010" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0F4F8;strokeColor=#1F4E78;strokeWidth=2;verticalAlign=top;" value="" vertex="1">
+          <mxGeometry height="1100" width="920" x="541" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-9" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#1F4E78;" value="OD-Agent 主服务 端口 7072 be-scope-boot" vertex="1">
+          <mxGeometry height="40" width="920" x="541" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDE7;strokeColor=#F9A825;strokeWidth=3;fontSize=10;align=left;verticalAlign=top;" value="第一层 输入理解（快思考，无LLM，小于1秒）&#xa;InputUnderstandingService&#xa;==================================================&#xa;未实现：EasyRules 规则引擎&#xa;未实现：HanLP 分词与命名实体识别&#xa;未实现：Redis 输入缓存&#xa;==================================================&#xa;已完成：normalizeInput 输入归一化&#xa;已完成：slot 提取（S001、dateRange）&#xa;已完成：quickOntologyMatch 快速本体匹配&#xa;已完成：置信度计算（阈值 0.91）&#xa;已完成：buildRuntimeContextDraft 构建草稿上下文&#xa;==================================================&#xa;完成度 70%&#xa;写入表：be_agent_runtime_context.layer1_json" vertex="1">
+          <mxGeometry height="170" width="880" x="561" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-11" edge="1" parent="1" source="i4M7rR2AzCevVuCarbud-10" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#F9A825;strokeWidth=2;fontSize=10;fontStyle=1;" target="i4M7rR2AzCevVuCarbud-12" value="草稿">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDE7;strokeColor=#F9A825;strokeWidth=3;fontSize=10;align=left;verticalAlign=top;" value="第二层 本体推理（慢思考，DeepSeek V4 Pro，1至3秒）&#xa;OntologyReasoningService&#xa;==================================================&#xa;未实现：Milvus 向量检索（真实知识图谱）&#xa;未实现：Nebula Graph 图数据库查询&#xa;未实现：替换 MetadataOnlyProvider 为真实 Provider&#xa;==================================================&#xa;已完成：retrieveOntologyGraph 本体图检索（缓存）&#xa;已完成：inferBusinessObjects 业务对象推断&#xa;已完成：resolveDatasetAndActions 数据集与动作解析&#xa;已完成：validateConstraints 约束校验&#xa;已完成：buildExecutionContext 构建执行上下文&#xa;==================================================&#xa;完成度 60%&#xa;写入表：be_agent_runtime_context.layer2_json&#xa;        be_agent_runtime_stage_evidence" vertex="1">
+          <mxGeometry height="170" width="880" x="561" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-13" edge="1" parent="1" source="i4M7rR2AzCevVuCarbud-12" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#F9A825;strokeWidth=2;fontSize=10;fontStyle=1;" target="i4M7rR2AzCevVuCarbud-14" value="上下文">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDE7;strokeColor=#F9A825;strokeWidth=3;fontSize=10;align=left;verticalAlign=top;" value="门控层 执行就绪门控（OD-POLICY 治理，小于500毫秒）&#xa;ExecutionReadinessGateService&#xa;==================================================&#xa;未实现：EasyRules 规则引擎集成&#xa;未实现：Orchestrator 中门控顺序（当前在 L2 之后，违反设计）&#xa;==================================================&#xa;已完成：preExecutionGate 三态决策&#xa;已完成：ALLOW / REQUIRE_HITL / BLOCKED 三态&#xa;已完成：postExecutionAudit 执行后审计&#xa;==================================================&#xa;完成度 75%&#xa;写入表：be_agent_runtime_audit_log&#xa;        be_agent_hitl_task（高风险场景）" vertex="1">
+          <mxGeometry height="150" width="880" x="561" y="1120" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-15" edge="1" parent="1" source="i4M7rR2AzCevVuCarbud-14" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#F9A825;strokeWidth=2;fontSize=10;fontStyle=1;" target="i4M7rR2AzCevVuCarbud-16" value="放行">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDE7;strokeColor=#F9A825;strokeWidth=3;fontSize=10;align=left;verticalAlign=top;" value="第三层 ReAct 业务执行（动态，调用 Runtime Adapter）&#xa;ReActExecutionService&#xa;==================================================&#xa;未实现：AnthropicClient 多模态模型&#xa;未实现：HITL 阻塞阶段统一契约&#xa;未实现：ReAct LLM 驱动循环（当前为确定性计划）&#xa;==================================================&#xa;已完成：思考-行动-观察循环&#xa;已完成：RuntimeAdapter（HTTP 防腐层）&#xa;已完成：DatasetAdapter（受控查询）&#xa;已完成：ConnectorAdapter（受控执行）&#xa;已完成：reAct() 委托到 8081 runner&#xa;==================================================&#xa;完成度 80%&#xa;写入表：be_agent_runtime_tool_call&#xa;        be_agent_action_result" vertex="1">
+          <mxGeometry height="170" width="880" x="561" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-17" edge="1" parent="1" source="i4M7rR2AzCevVuCarbud-16" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#4CAF50;strokeWidth=2;fontSize=10;fontStyle=1;" target="i4M7rR2AzCevVuCarbud-18" value="结果">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=3;fontSize=10;align=left;verticalAlign=top;" value="第四层 治理钩子（横切关注点，小于200毫秒）&#xa;GovernanceHookService&#xa;==================================================&#xa;未实现：Orchestrator 中显式 L4 阶段标记&#xa;==================================================&#xa;已完成：preExecutionGate 三态（放行 / HITL / 拒绝）&#xa;已完成：postExecutionAudit 后置审计&#xa;已完成：ALLOW 放行至 L3&#xa;已完成：REQUIRE_HITL 写入 be_agent_hitl_task&#xa;已完成：BLOCKED 终止任务&#xa;已完成：所有决策写入 audit_log&#xa;==================================================&#xa;完成度 85%&#xa;写入表：be_agent_runtime_audit_log&#xa;        be_agent_hitl_task" vertex="1">
+          <mxGeometry height="150" width="880" x="561" y="1500" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-19" edge="1" parent="1" source="i4M7rR2AzCevVuCarbud-18" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#2E7D32;strokeWidth=2;fontSize=10;fontStyle=1;dashed=1;" target="i4M7rR2AzCevVuCarbud-20" value="输出">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;strokeWidth=3;fontSize=10;align=left;verticalAlign=top;" value="第五层 输出管理（格式化、过滤、缓存、交付，小于100毫秒）&#xa;OutputManagementService&#xa;==================================================&#xa;未实现：Redis 缓存（当前内存 Map，重启丢失）&#xa;未实现：WebSocket 推送（当前仅 SSE，无 WS 通道）&#xa;未实现：TTS 文字转语音&#xa;未实现：STT 语音转文字&#xa;未实现：安全内容审核网关&#xa;==================================================&#xa;已完成：SSE 流式输出（SseEmitter）&#xa;已完成：validateAndFormatOutput 校验格式化&#xa;已完成：业务总结与风险提示&#xa;已完成：结构化输出（markdown 加 JSON）&#xa;==================================================&#xa;完成度 30%&#xa;写入表：be_agent_runtime_context.layer5_json" vertex="1">
+          <mxGeometry height="170" width="880" x="561" y="1680" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F8E9;strokeColor=#82B366;strokeWidth=2;verticalAlign=top;" value="" vertex="1">
+          <mxGeometry height="250" width="440" x="1481" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-22" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#2E7D32;" value="Agent Runner 端口 8081 至 8099 be-agent-runner" vertex="1">
+          <mxGeometry height="40" width="440" x="1481" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontSize=10;align=center;verticalAlign=middle;" value="RuntimeAdapter&#xa;HTTP 防腐层&#xa;已完成" vertex="1">
+          <mxGeometry height="90" width="130" x="1501" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontSize=10;align=center;verticalAlign=middle;" value="AgentScope&#xa;Java v2&#xa;已完成" vertex="1">
+          <mxGeometry height="90" width="130" x="1651" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;fontSize=10;align=center;verticalAlign=middle;" value="ThinkService&#xa;LLM 调用&#xa;未实现&#xa;AnthropicClient" vertex="1">
+          <mxGeometry height="90" width="100" x="1801" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-26" edge="1" parent="1" source="i4M7rR2AzCevVuCarbud-21" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#82B366;strokeWidth=3;fontSize=10;fontStyle=1;" target="i4M7rR2AzCevVuCarbud-27" value="HTTP 防腐调用&#xa;POST /api/runtime/ontology-list&#xa;POST /object-types/{code}/query&#xa;POST /actions/{code}/query&#xa;POST /actions/{code}/execute&#xa;请求头：X-Contract-Version 与 Authorization 与 X-Idempotency-Key">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#D79B00;strokeWidth=2;fontSize=10;align=left;verticalAlign=top;" value="本体 Runtime 端口 8080&#xa;be-ontology-runtime&#xa;刘龙腾禁区 - 只读&#xa;==================================================&#xa;已完成：ontology-list 与 ontology/{id}&#xa;已完成：Dataset 受控查询&#xa;已完成：ConnectorOperation 受控执行&#xa;已完成：HTTP Adapter 对外暴露&#xa;备注：归属刘龙腾维护&#xa;备注：不在 OD-Agent 治理范围内" vertex="1">
+          <mxGeometry height="180" width="440" x="1481" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-28" edge="1" parent="1" source="i4M7rR2AzCevVuCarbud-27" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#B85450;strokeWidth=3;fontSize=10;fontStyle=1;" target="i4M7rR2AzCevVuCarbud-29" value="受控读写&#xa;Dataset 直读 与 ConnectorOperation&#xa;备注：高风险写入需要 HITL 审批">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-29" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;strokeWidth=2;fontSize=10;align=left;verticalAlign=top;" value="业务系统 端口 18080&#xa;==================================================&#xa;采购数据库：po 与 supplier 与 material 与 risk_event&#xa;SAP 与 ERP 与内部业务接口&#xa;数据源（只读快照 与 实时查询）&#xa;通知渠道（邮件 与 IM 与 工单）&#xa;备注：不在 OD-Agent 治理范围内" vertex="1">
+          <mxGeometry height="150" width="440" x="1481" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-30" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;dashed=1;" value="调用链 共五跳&#xa;&#xa;第一跳 8091 至 7072&#xa;   HTTPS 与 SSE&#xa;   POST /api/od-agent/...&#xa;&#xa;第二跳 7072 至 8081&#xa;   HTTP 与 RPC&#xa;   POST /api/runner/{id}/execute&#xa;&#xa;第三跳 8081 至 8080&#xa;   HTTP 防腐层&#xa;   POST /api/runtime/...&#xa;&#xa;第四跳 8080 至 18080&#xa;   Dataset 与 Connector&#xa;   受控读写&#xa;&#xa;第五跳 结果回流&#xa;   18080 至 8080 至 8081 至 7072 至 8091&#xa;   SSE 流式输出" vertex="1">
+          <mxGeometry height="280" width="300" x="1961" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-31" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#D79B00;fontSize=10;align=left;verticalAlign=top;dashed=1;" value="HITL 闭环&#xa;&#xa;1. 门控触发 REQUIRE_HITL&#xa;2. 写入 be_agent_hitl_task&#xa;   状态等于 HITL_PENDING&#xa;3. 前端 SSE 事件&#xa;   runtime.hitl_pending&#xa;4. 用户批准或拒绝&#xa;5. POST /hitl/{ctx}/approve&#xa;6. 使用原 contextId&#xa;   恢复至 L3&#xa;&#xa;备注：阻塞阶段契约&#xa;待 L3 统一" vertex="1">
+          <mxGeometry height="200" width="300" x="1961" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-32" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontSize=10;align=left;verticalAlign=top;dashed=1;" value="硬编码合规性检查&#xa;&#xa;已完成：无硬编码 IP 与 端口 与 模型名&#xa;已完成：无硬编码 供应商 与 订单 与 风险文本&#xa;已完成：无硬编码 Runtime URL 与 Dataset 编码&#xa;已完成：无硬编码 ConnectorOperation 编码&#xa;已完成：无直连 172.19.3.101:18080&#xa;已完成：全部经 8080 HTTP 防腐层" vertex="1">
+          <mxGeometry height="130" width="300" x="1961" y="1180" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-33" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;dashed=1;" value="18 张表持久化（位于端口 7072 MySQL）&#xa;&#xa;A 配置类 共 5 张：definition 与 capability 与&#xa;  prompt 与 skill 与 initialize_log&#xa;&#xa;B 会话类 共 6 张：session 与 message 与&#xa;  run_record 与 hitl_task 与&#xa;  preflight_report 与 instance&#xa;&#xa;C 监控类 共 2 张：cost_summary 与 quota_policy&#xa;&#xa;D 运行类 共 5 张：context 与 stage_evidence 与&#xa;  tool_call 与 action_result 与 audit_log&#xa;  对应 M11 至 M15" vertex="1">
+          <mxGeometry height="200" width="300" x="1961" y="1330" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-34" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F4E78;strokeColor=#1F4E78;fontSize=12;fontStyle=1;fontColor=#FFFFFF;verticalAlign=top;" value="" vertex="1">
+          <mxGeometry height="180" width="2440" x="361" y="2100" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-35" parent="1" style="text;html=1;align=left;fontSize=13;fontStyle=1;fontColor=#FFFFFF;" value="图例" vertex="1">
+          <mxGeometry height="24" width="200" x="381" y="2110" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;" value="绿色：已完成 80% 及以上" vertex="1">
+          <mxGeometry height="40" width="220" x="381" y="2150" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDE7;strokeColor=#F9A825;strokeWidth=2;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;" value="黄色：部分实现 60% 至 79%" vertex="1">
+          <mxGeometry height="40" width="240" x="621" y="2150" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;strokeWidth=2;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;" value="红色：未实现 低于 60%" vertex="1">
+          <mxGeometry height="40" width="220" x="881" y="2150" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;" value="五层完成度汇总&#xa;==================================================&#xa;L1 输入理解           70% 黄色&#xa;L2 本体推理           60% 黄色&#xa;Gate 门控            75% 黄色&#xa;L3 ReAct 执行        80% 黄色&#xa;L4 治理钩子          85% 绿色&#xa;L5 输出管理          30% 红色&#xa;==================================================&#xa;平均约 67%&#xa;最大缺口：L5 输出管理 30%" vertex="1">
+          <mxGeometry height="150" width="240" x="1141" y="2120" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-40" parent="1" style="text;html=1;align=left;fontSize=10;fontColor=#FFFFFF;" value="V10 硬性规则（强制）&#xa;禁止：7072 或 8081 直连 18080（必须经 8080）&#xa;禁止：8091 直连 8081 或 8080（必须经 7072）&#xa;禁止：修改 be-ontology-runtime 目录（刘龙腾禁区）&#xa;禁止：硬编码 IP 端口 模型名 业务术语&#xa;要求：所有跨进程调用经 HTTP 防腐层与 鉴权&#xa;要求：交付前运行 scripts/check-domain-hardcoding.ps1" vertex="1">
+          <mxGeometry height="140" width="600" x="1401" y="2120" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-41" parent="1" style="text;html=1;align=left;fontSize=10;fontColor=#FFFFFF;" value="边线颜色约定&#xa;橙色  = 8091 至 7072（SSE 与 HTTPS）&#xa;蓝色  = 7072 至 8081（HTTP 委托）&#xa;绿色  = 8081 至 8080（HTTP 防腐层）&#xa;红色  = 8080 至 18080（受控写入 与 HITL 后）&#xa;灰色  = 结果回流 与 SSE 输出" vertex="1">
+          <mxGeometry height="100" width="400" x="2021" y="2120" as="geometry" />
+        </mxCell>
+        <mxCell id="i4M7rR2AzCevVuCarbud-42" parent="1" style="text;html=1;align=left;fontSize=10;fontColor=#FFFFFF;" value="服务归属颜色&#xa;蓝色  = OD-Agent 7072（唐宗忠）&#xa;黄色  = 前端 8091（谢道贵）&#xa;绿色  = Agent Runner 8081（唐宗忠）&#xa;橙色  = 刘龙腾 Runtime 8080（刘龙腾）&#xa;灰色  = 业务系统 18080" vertex="1">
+          <mxGeometry height="100" width="340" x="2441" y="2120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="WXQNSnKZlKEBwfAlsaDC" name="第 4 页">
+    <mxGraphModel dx="1672" dy="764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1F4E78;" value="OD-Agent v10 五层架构实现状态图（严格版）&#xa;调用链 8091 - 7072 - 8081 - 8080 - 18080" vertex="1">
+          <mxGeometry height="60" width="2200" x="387" y="487" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0F4F8;strokeColor=#1F4E78;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="1320" width="960" x="407" y="577" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#1F4E78;" value="OD-Agent 主服务 端口 7072 be-scope-boot" vertex="1">
+          <mxGeometry height="30" width="960" x="407" y="577" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=3;fontSize=10;align=left;verticalAlign=top;" value="第一层 输入理解（快思考，无LLM，小于1秒）&#xa;InputUnderstandingService&#xa;==================================================&#xa;绿色 真实实现：从 properties + capability repository 读取词库和配置&#xa;已完成：normalizeInput / splitForMatch（CJK 2-gram 分词）/ dateResolution&#xa;已完成：extractSlots（inputIdentifiers、dateRange、riskLevel、requestedActions）&#xa;已完成：calculateConfidence（加权公式，阈值 0.91）&#xa;已完成：buildRuntimeContextDraft + ConfidenceRouter 三态路由&#xa;已完成：detectIntent（query/action/chat/hitl）&#xa;==================================================&#xa;缺失：EasyRules 规则引擎（当前用 if-else 替代）&#xa;缺失：HanLP 命名实体识别（当前用正则替代）&#xa;缺失：Redis 输入缓存（当前无缓存）&#xa;==================================================&#xa;完成度 75% 绿色 真实实现&#xa;写入表：be_agent_runtime_context.layer1_json" vertex="1">
+          <mxGeometry height="220" width="920" x="427" y="627" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-5" edge="1" parent="1" source="NLWbhrHgZpU_YoV1tSQs-4" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#2E7D32;strokeWidth=2;fontSize=10;fontStyle=1;" target="NLWbhrHgZpU_YoV1tSQs-6" value="草稿">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;strokeWidth=3;fontSize=10;align=left;verticalAlign=top;" value="第二层 本体推理（慢思考，LLM，1至3秒）&#xa;OntologyReasoningService&#xa;==================================================&#xa;橙色 Mock 默认：MetadataOnlyKnowledgeGraphProvider&#xa;代码自承认：return GRAPH_RAG_STATUS_UNWIRED + PROVIDER_NONE&#xa;（字面量写在 return 语句里，等同于硬编码假数据）&#xa;==================================================&#xa;真实部分：retrieveOntologyGraph 缓存逻辑存在，但底层走 mock provider&#xa;真实部分：inferBusinessObjects / resolveDatasetAndActions / validateConstraints&#xa;真实部分：buildExecutionContext&#xa;==================================================&#xa;橙色 缺陷：Milvus 客户端类存在但默认不启用&#xa;橙色 缺陷：Nebula 客户端类存在但默认不启用&#xa;橙色 缺陷：GraphRagConfiguration 存在但 metadataMode=UNWIRED&#xa;==================================================&#xa;完成度 40% 橙色 Mock 默认（不是真实实现）&#xa;写入表：be_agent_runtime_context.layer2_json&#xa;        be_agent_runtime_stage_evidence" vertex="1">
+          <mxGeometry height="220" width="920" x="427" y="877" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-7" edge="1" parent="1" source="NLWbhrHgZpU_YoV1tSQs-6" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#E65100;strokeWidth=2;fontSize=10;fontStyle=1;" target="NLWbhrHgZpU_YoV1tSQs-8" value="上下文">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=3;fontSize=10;align=left;verticalAlign=top;" value="门控层 执行就绪门控（OD-POLICY 治理，小于500毫秒）&#xa;ExecutionReadinessGateService&#xa;==================================================&#xa;绿色 真实实现：三态决策 ALLOW / REQUIRE_HITL / BLOCKED&#xa;已完成：preExecutionGate / postExecutionAudit&#xa;==================================================&#xa;红色 缺陷：Orchestrator 中门控在 L2 之后（违反设计：应 L1 后先门控）&#xa;红色 缺陷：未集成 EasyRules 规则引擎（当前用硬编码条件判断）&#xa;==================================================&#xa;完成度 70% 绿色 真实实现但有设计缺陷&#xa;写入表：be_agent_runtime_audit_log / be_agent_hitl_task" vertex="1">
+          <mxGeometry height="160" width="920" x="427" y="1127" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-9" edge="1" parent="1" source="NLWbhrHgZpU_YoV1tSQs-8" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#2E7D32;strokeWidth=2;fontSize=10;fontStyle=1;" target="NLWbhrHgZpU_YoV1tSQs-10" value="放行">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=3;fontSize=10;align=left;verticalAlign=top;" value="第三层 ReAct 业务执行（动态，调用 Runtime Adapter）&#xa;ReActExecutionService + AgentScopeThinkService&#xa;==================================================&#xa;绿色 真实实现：&#xa;  runnerAdapter 真实调用（AgentScopeRunnerAdapter）&#xa;  be_agent_model 元数据解析（AgentModelMetadataResolver）&#xa;  模型配置来源：MODEL_CONFIG_SOURCE_BE_AGENT_MODEL（正确）&#xa;  HITL 审批后恢复逻辑（contextId 复用）&#xa;  RuntimeFacadeService 委托到 8081 runner&#xa;  buildContractParams 参数拼接逻辑&#xa;  deterministicQueryFastPath（确定性子集快速路径）&#xa;==================================================&#xa;橙色 缺陷：若无 be_agent_model 记录则 L3ThinkBlockedException&#xa;橙色 缺陷：若 runnerAdapter 未就绪则 L3RuntimeAdapterException&#xa;橙色 缺陷：无真正 LLM 驱动的 ReAct 循环（当前确定性计划）&#xa;红色 缺陷：AnthropicClient 多模态未实现&#xa;==================================================&#xa;完成度 60% 绿色 真实实现但易阻塞&#xa;写入表：be_agent_runtime_tool_call / be_agent_action_result" vertex="1">
+          <mxGeometry height="230" width="920" x="427" y="1317" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-11" edge="1" parent="1" source="NLWbhrHgZpU_YoV1tSQs-10" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#2E7D32;strokeWidth=2;fontSize=10;fontStyle=1;" target="NLWbhrHgZpU_YoV1tSQs-12" value="结果">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=3;fontSize=10;align=left;verticalAlign=top;" value="第四层 治理钩子（横切关注点，小于200毫秒）&#xa;GovernanceHookService&#xa;==================================================&#xa;绿色 真实实现：preExecutionGate / postExecutionAudit&#xa;已完成：ALLOW 放行 / REQUIRE_HITL 写表 / BLOCKED 终止&#xa;已完成：所有决策写入 audit_log&#xa;已完成：与 Orchestrator 真实集成&#xa;==================================================&#xa;完成度 80% 绿色 真实实现&#xa;写入表：be_agent_runtime_audit_log / be_agent_hitl_task" vertex="1">
+          <mxGeometry height="130" width="920" x="427" y="1577" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-13" edge="1" parent="1" source="NLWbhrHgZpU_YoV1tSQs-12" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#2E7D32;strokeWidth=2;fontSize=10;fontStyle=1;dashed=1;" target="NLWbhrHgZpU_YoV1tSQs-14" value="输出">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;strokeWidth=3;fontSize=10;align=left;verticalAlign=top;" value="第五层 输出管理（格式化、过滤、缓存、交付）&#xa;OutputManagementService&#xa;==================================================&#xa;绿色 真实实现：&#xa;  formatOutput（evidenceContract 五层证据链）&#xa;  applyOutputFilters（敏感字段脱敏 sanitizeMap）&#xa;  buildBusinessResult / readableBusinessSummary（中文摘要）&#xa;  displayColumns / fieldLabels 中文标签映射&#xa;==================================================&#xa;橙色 Mock 缺陷：outputCache 是 ConcurrentHashMap（进程内内存）&#xa;            不是 Redis，服务重启后缓存丢失（代码明文：new ConcurrentHashMap）&#xa;橙色 缺陷：deliverOutput 只返回 Map，未真正发送 SSE&#xa;红色 缺失：WebSocket 通道 / TTS / STT / 安全内容审核网关&#xa;==================================================&#xa;完成度 40% 橙色 真实部分实现 + Mock 缓存&#xa;写入表：be_agent_runtime_context.layer5_json" vertex="1">
+          <mxGeometry height="200" width="920" x="427" y="1737" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F8E9;strokeColor=#82B366;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="280" width="440" x="1387" y="577" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-16" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#2E7D32;" value="Agent Runner 端口 8081 至 8099 be-agent-runner" vertex="1">
+          <mxGeometry height="30" width="440" x="1387" y="577" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontSize=10;align=center;verticalAlign=middle;" value="RuntimeAdapter&#xa;HTTP 防腐层&#xa;绿色 真实实现" vertex="1">
+          <mxGeometry height="80" width="120" x="1407" y="627" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontSize=10;align=center;verticalAlign=middle;" value="AgentScope&#xa;Java v2&#xa;绿色 真实实现" vertex="1">
+          <mxGeometry height="80" width="120" x="1547" y="627" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;fontSize=10;align=center;verticalAlign=middle;" value="ThinkService&#xa;LLM 调用&#xa;橙色 依赖&#xa;be_agent_model&#xa;元数据就绪" vertex="1">
+          <mxGeometry height="80" width="120" x="1687" y="627" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;fontSize=9;align=left;verticalAlign=middle;" value="Runner 依赖：AgentInstanceRecord + be_agent_model 模型元数据&#xa;若 modelMetadata.resolved() == false 则 L3ThinkBlockedException" vertex="1">
+          <mxGeometry height="60" width="400" x="1407" y="727" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-21" edge="1" parent="1" source="NLWbhrHgZpU_YoV1tSQs-15" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#82B366;strokeWidth=3;fontSize=10;fontStyle=1;" target="NLWbhrHgZpU_YoV1tSQs-22" value="HTTP 防腐调用&#xa;POST /api/runtime/ontology-list&#xa;POST /object-types/{code}/query&#xa;POST /actions/{code}/execute&#xa;请求头含鉴权头">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#D79B00;strokeWidth=2;fontSize=10;align=left;verticalAlign=top;" value="本体 Runtime 端口 8080&#xa;be-ontology-runtime&#xa;刘龙腾禁区 - 只读&#xa;==================================================&#xa;已完成：ontology-list / ontology/{id}&#xa;已完成：Dataset 受控查询&#xa;已完成：ConnectorOperation 受控执行&#xa;已完成：HTTP Adapter 对外暴露&#xa;备注：归属刘龙腾维护，不在 OD-Agent 治理范围" vertex="1">
+          <mxGeometry height="150" width="440" x="1387" y="877" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-23" edge="1" parent="1" source="NLWbhrHgZpU_YoV1tSQs-22" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#B85450;strokeWidth=3;fontSize=10;fontStyle=1;" target="NLWbhrHgZpU_YoV1tSQs-24" value="受控读写&#xa;Dataset 直读 + ConnectorOperation&#xa;高风险写入需要 HITL 审批">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;strokeWidth=2;fontSize=10;align=left;verticalAlign=top;" value="业务系统 端口 18080&#xa;==================================================&#xa;采购数据库：po / supplier / material / risk_event&#xa;SAP / ERP / 内部业务接口&#xa;数据源（只读快照 + 实时查询）&#xa;通知渠道（邮件 / IM / 工单）&#xa;不在 OD-Agent 治理范围内" vertex="1">
+          <mxGeometry height="130" width="440" x="1387" y="1047" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;dashed=1;" value="调用链 共五跳&#xa;&#xa;第一跳 8091 至 7072&#xa;   HTTPS + SSE&#xa;   POST /api/od-agent/...&#xa;&#xa;第二跳 7072 至 8081&#xa;   HTTP + RPC&#xa;   POST /api/runner/{id}/execute&#xa;&#xa;第三跳 8081 至 8080&#xa;   HTTP 防腐层&#xa;   POST /api/runtime/...&#xa;&#xa;第四跳 8080 至 18080&#xa;   Dataset + Connector&#xa;   受控读写&#xa;&#xa;第五跳 结果回流&#xa;   SSE 流式输出至 8091" vertex="1">
+          <mxGeometry height="260" width="300" x="1867" y="577" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontSize=10;align=left;verticalAlign=top;dashed=1;" value="HITL 闭环&#xa;&#xa;1. 门控触发 REQUIRE_HITL&#xa;2. 写入 be_agent_hitl_task&#xa;   状态 = HITL_PENDING&#xa;3. 前端 SSE 事件&#xa;   runtime.hitl_pending&#xa;4. 用户批准或拒绝&#xa;5. POST /hitl/{ctx}/approve&#xa;6. 使用原 contextId&#xa;   恢复至 L3&#xa;&#xa;绿色 真实实现（代码验证）" vertex="1">
+          <mxGeometry height="180" width="300" x="1867" y="857" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;dashed=1;" value="18 张表持久化（端口 7072 MySQL）&#xa;&#xa;A 配置类 5 张：definition / capability /&#xa;  prompt / skill / initialize_log&#xa;&#xa;B 会话类 6 张：session / message /&#xa;  run_record / hitl_task /&#xa;  preflight_report / instance&#xa;&#xa;C 监控类 2 张：cost_summary / quota_policy&#xa;&#xa;D 运行类 5 张：context / stage_evidence /&#xa;  tool_call / action_result / audit_log&#xa;  对应 M11 至 M15" vertex="1">
+          <mxGeometry height="180" width="300" x="1867" y="1057" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-28" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;fontSize=10;align=left;verticalAlign=top;dashed=1;" value="硬编码合规性检查&#xa;&#xa;橙色 待验证：IP 172.19.3.101 直连 18080&#xa;橙色 待验证：端口 18080 硬编码检查&#xa;绿色 已完成：无 DeepSeek V4 Pro 硬编码&#xa;  （从 be_agent_model 读，非代码写死）&#xa;绿色 已完成：L2 默认走 MetadataOnlyProvider&#xa;  （代码自承认 UNWIRED 字面量）&#xa;绿色 已完成：无业务术语硬编码在 OD-Agent 逻辑里&#xa;建议：跑 scripts/check-domain-hardcoding.ps1&#xa;       做最终确认" vertex="1">
+          <mxGeometry height="160" width="300" x="1867" y="1257" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#9E9E9E;fontSize=10;verticalAlign=middle;" value="" vertex="1">
+          <mxGeometry height="1320" width="160" x="227" y="577" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-30" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#B45F06;fontSize=11;fontStyle=1;verticalAlign=middle;" value="端口 8091&#xa;前端入口" vertex="1">
+          <mxGeometry height="70" width="160" x="227" y="577" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-31" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#1F4E78;fontSize=11;fontStyle=1;verticalAlign=middle;" value="端口 7072&#xa;OD-Agent&#xa;主服务" vertex="1">
+          <mxGeometry height="1230" width="160" x="227" y="667" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-32" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=11;fontStyle=1;verticalAlign=middle;" value="端口 8081-8099&#xa;Agent Runner" vertex="1">
+          <mxGeometry height="80" width="160" x="227" y="1897" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-33" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=11;fontStyle=1;verticalAlign=middle;" value="端口 8080&#xa;刘龙腾 Runtime&#xa;（禁区）" vertex="1">
+          <mxGeometry height="80" width="160" x="227" y="1997" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-34" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;fontSize=11;fontStyle=1;verticalAlign=middle;" value="端口 18080&#xa;业务系统" vertex="1">
+          <mxGeometry height="60" width="160" x="227" y="2097" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-35" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F4E78;strokeColor=#1F4E78;fontSize=12;fontStyle=1;fontColor=#FFFFFF;verticalAlign=top;" value="" vertex="1">
+          <mxGeometry height="170" width="2440" x="227" y="2177" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-36" parent="1" style="text;html=1;align=left;fontSize=13;fontStyle=1;fontColor=#FFFFFF;" value="图例（四色状态）" vertex="1">
+          <mxGeometry height="24" width="200" x="247" y="2187" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontSize=10;align=center;verticalAlign=middle;" value="绿色：真实实现（可交付）&#xa;L1 75% / Gate 70% / L3 60% / L4 80%" vertex="1">
+          <mxGeometry height="55" width="220" x="247" y="2222" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;strokeWidth=2;fontSize=10;align=center;verticalAlign=middle;" value="橙色：Mock 默认或部分实现&#xa;L2 40% MetadataOnly UNWIRED&#xa;L5 40% 内存缓存非 Redis&#xa;L3 60% 依赖 model 元数据" vertex="1">
+          <mxGeometry height="55" width="280" x="487" y="2222" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;strokeWidth=2;fontSize=10;align=center;verticalAlign=middle;" value="红色：完全未实现或严重缺陷&#xa;L2 Milvus / Nebula 真实 KG&#xa;L5 Redis / WebSocket / TTS / STT&#xa;Gate 门控顺序错误（违反设计）&#xa;Gate 未集成 EasyRules" vertex="1">
+          <mxGeometry height="55" width="280" x="787" y="2222" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-40" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F4E78;fontSize=10;align=left;verticalAlign=top;" value="五层完成度汇总&#xa;==================================================&#xa;L1 输入理解    75%  绿色 真实实现&#xa;L2 本体推理    40%  橙色 Mock 默认&#xa;Gate 门控      70%  绿色 有红色缺陷&#xa;L3 ReAct 执行   60%  绿色 易阻塞&#xa;L4 治理钩子    80%  绿色 真实实现&#xa;L5 输出管理    40%  橙色 Mock 缓存&#xa;==================================================&#xa;平均约 61%&#xa;最大缺口：L2 KG + L5 缓存/WS + Gate 顺序" vertex="1">
+          <mxGeometry height="140" width="280" x="1087" y="2202" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-41" parent="1" style="text;html=1;align=left;fontSize=10;fontColor=#FFFFFF;" value="V10 硬性规则（强制）&#xa;禁止：7072 或 8081 直连 18080（必须经 8080）&#xa;禁止：8091 直连 8081 或 8080（必须经 7072）&#xa;禁止：修改 be-ontology-runtime 目录（刘龙腾禁区）&#xa;禁止：硬编码 IP / 端口 / 模型名 / 业务术语&#xa;要求：所有跨进程调用经 HTTP 防腐层 + 鉴权&#xa;建议：交付前运行 check-domain-hardcoding.ps1" vertex="1">
+          <mxGeometry height="140" width="500" x="1387" y="2202" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-42" parent="1" style="text;html=1;align=left;fontSize=10;fontColor=#FFFFFF;" value="边线颜色约定&#xa;绿色  = L1 到 L5 主流程（正常）&#xa;橙色  = Mock 默认路径（L2 默认）&#xa;红色  = 未实现或缺失功能&#xa;灰色  = 结果回流 / SSE 输出" vertex="1">
+          <mxGeometry height="80" width="300" x="1907" y="2202" as="geometry" />
+        </mxCell>
+        <mxCell id="NLWbhrHgZpU_YoV1tSQs-43" parent="1" style="text;html=1;align=left;fontSize=10;fontColor=#FFFFFF;" value="服务归属颜色&#xa;蓝色  = OD-Agent 7072（唐宗忠）&#xa;黄色  = 前端 8091（谢道贵）&#xa;绿色  = Agent Runner 8081（唐宗忠）&#xa;橙色  = 刘龙腾 Runtime 8080（刘龙腾）&#xa;灰色  = 业务系统 18080" vertex="1">
+          <mxGeometry height="80" width="420" x="2227" y="2202" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="eRIjpQZpHMtaoYlKnRba" name="第 5 页">
+    <mxGraphModel dx="1153" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#1F4E78;" value="OD-Agent v10 五层架构真实实现形态（当前工作区静态核对版）&#xa;生成时间：2026-06-26 13:16:44 +08:00&#xa;口径：基于 drawio + be-agent-java 代码静态核对；不等同于运行验收或远端已合并状态" vertex="1">
+          <mxGeometry height="80" width="2160" x="429.3333333134651" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;strokeWidth=2;fontSize=12;align=left;verticalAlign=top;" value="重要说明&#xa;1. 当前 be-ontology 工作树存在未提交改动，本图反映“当前工作区静态核对形态”。&#xa;2. 绿色表示代码边界真实存在，不代表运行验收通过。&#xa;3. 橙色表示部分真实/依赖外部配置/存在降级路径。&#xa;4. 红色表示与 V10 完整真实态仍有缺口或未验收。&#xa;5. 8080 be-ontology-runtime 为刘龙腾禁区，本图只标调用关系，不表示 Codex 可修改。" vertex="1">
+          <mxGeometry height="150" width="520" x="1989.3333333134651" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#B45F06;strokeWidth=2;fontSize=12;align=left;verticalAlign=top;" value="8091 前端入口&#xa;归属：谢道贵&#xa;职责：页面、SSE 消费、用户交互&#xa;真实口径：正式前端入口是 8091，不是 5777&#xa;Codex 当前不再优化前端" vertex="1">
+          <mxGeometry height="140" width="300" x="429.3333333134651" y="615" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#1F4E78;strokeWidth=3;fontSize=12;align=left;verticalAlign=top;" value="7072 OD-Agent 主服务&#xa;be-scope-boot&#xa;归属：唐宗忠 / Codex 后端关注范围&#xa;职责：会话编排、五层流水线、治理、审计、HITL、Runner 调度&#xa;状态：骨架真实，仍有 V10 缺口" vertex="1">
+          <mxGeometry height="90" width="920" x="849.3333333134651" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#D79B00;strokeWidth=3;fontSize=11;align=left;verticalAlign=top;" value="L1 输入理解 InputUnderstandingService&#xa;状态：条件真实（当前工作区）&#xa;已存在：normalizeInput / quickOntologyMatch / extractSlots / calculateConfidence / buildRuntimeContextDraft&#xa;真实点：RuntimePipelineProperties + capability repository 边界存在&#xa;缺口：EasyRules、HanLP、Redis 输入缓存未真实接入&#xa;注意：当前 L1 相关代码存在未提交变更，不能当作远端已合并事实" vertex="1">
+          <mxGeometry height="125" width="880" x="849.3333333134651" y="705" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;strokeWidth=3;fontSize=11;align=left;verticalAlign=top;" value="L2 本体推理 RuntimeOntologyReasoningService&#xa;状态：部分真实 / 默认降级&#xa;真实点：OntologyMappingDraft、模型证据、be_agent_model 元数据解析、LlmGatewayAdapter 边界存在&#xa;真实点：Nebula/Milvus Client 与 Provider SPI 类存在&#xa;缺口：默认仍可走 MetadataOnlyKnowledgeGraphProvider；GRAPH_RAG_STATUS_UNWIRED / PROVIDER_NONE 存在&#xa;结论：不是完整真实 GraphRAG，本层仍是最大 P0 缺口" vertex="1">
+          <mxGeometry height="145" width="880" x="849.3333333134651" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=3;fontSize=11;align=left;verticalAlign=top;" value="Gate 执行就绪门控 ExecutionReadinessGateService&#xa;状态：基本真实，但规则引擎未完整接入&#xa;真实点：ALLOW / REQUIRE_HITL / BLOCKED 三态决策存在&#xa;真实点：与 GovernanceHookService / HITL 写表链路存在&#xa;缺口：EasyRules / OD-POLICY 规则引擎不是完整真实形态&#xa;风险：门控顺序是否完全符合 V10 需结合 Orchestrator 再验收" vertex="1">
+          <mxGeometry height="125" width="880" x="849.3333333134651" y="1035" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;strokeWidth=3;fontSize=11;align=left;verticalAlign=top;" value="L3 ReAct 执行 ReActExecutionService + AgentScopeThinkService&#xa;状态：部分真实 / 强依赖运行条件&#xa;真实点：AgentScope Java v2 边界、AgentModelMetadataResolver、Runner Adapter、act/observe 调用骨架存在&#xa;真实点：be_agent_model 作为模型配置来源边界存在&#xa;缺口：存在 deterministic fast path；真实 LLM ReAct 循环不应视为全量稳定完成&#xa;阻塞：缺 be_agent_model、Runner 未就绪、模型调用失败时会 fail-closed" vertex="1">
+          <mxGeometry height="145" width="880" x="849.3333333134651" y="1190" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=3;fontSize=11;align=left;verticalAlign=top;" value="L4 治理钩子 GovernanceHookService&#xa;状态：基本真实&#xa;真实点：preExecutionGate / postExecutionAudit 边界存在&#xa;真实点：审计、HITL、拒绝/放行证据链存在&#xa;缺口：需要端到端 DB 记录与日志验收证明每次真实写入" vertex="1">
+          <mxGeometry height="105" width="880" x="849.3333333134651" y="1365" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;strokeWidth=3;fontSize=11;align=left;verticalAlign=top;" value="L5 输出管理 OutputManagementService&#xa;状态：部分真实 / 交付能力未完整&#xa;真实点：formatOutput、applyOutputFilters、sanitizeMap、businessResult、evidenceContract 存在&#xa;缺口：outputCache 是 ConcurrentHashMap 进程内缓存，不是 Redis&#xa;缺口：deliverOutput 返回 Map；真正 SSE 发送需由 Orchestrator/SSE broadcaster 证明&#xa;结论：输出结构真实，缓存/交付通道不是完整 V10 生产形态" vertex="1">
+          <mxGeometry height="135" width="880" x="849.3333333134651" y="1500" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;strokeWidth=2;fontSize=12;align=left;verticalAlign=top;" value="8081-8099 Agent Runner&#xa;be-agent-runner&#xa;状态：代码边界真实，运行态需验证&#xa;真实点：RunnerAgentScopeLoop、RunnerReactExecutionService、RuntimeAdapter 防腐层存在&#xa;缺口：是否真实调用本地 8080，需要运行日志/API 证据" vertex="1">
+          <mxGeometry height="145" width="360" x="1849.3333333134651" y="795" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=2;fontSize=12;align=left;verticalAlign=top;" value="8080 be-ontology-runtime&#xa;刘龙腾负责 / Codex 禁区&#xa;状态：外部真实依赖，非本仓可改范围&#xa;职责：Ontology / Dataset / ConnectorOperation / Adapter&#xa;要求：7072/8081 不能绕过 8080 直连 18080" vertex="1">
+          <mxGeometry height="140" width="360" x="1849.3333333134651" y="995" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;strokeWidth=2;fontSize=12;align=left;verticalAlign=top;" value="18080 业务系统 / POC&#xa;状态：外部系统&#xa;职责：真实业务数据、Dataset 查询结果、Connector 写入目标&#xa;验收要求：必须用 DB/API/日志证明查询和写入真实发生" vertex="1">
+          <mxGeometry height="120" width="360" x="2149.333333313465" y="1240" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-14" edge="1" parent="1" source="Ojb_anMNfLaMBT8-59zG-3" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;orthogonalLoop=1;jettySize=auto;endArrow=block;endFill=1;strokeColor=#1F4E78;strokeWidth=2;fontSize=10;" target="Ojb_anMNfLaMBT8-59zG-4" value="REST + SSE&#xa;必须经 7072">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-15" edge="1" parent="1" source="Ojb_anMNfLaMBT8-59zG-5" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeColor=#D79B00;strokeWidth=2;fontSize=10;" target="Ojb_anMNfLaMBT8-59zG-6" value="draft">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-16" edge="1" parent="1" source="Ojb_anMNfLaMBT8-59zG-6" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeColor=#E65100;strokeWidth=2;fontSize=10;" target="Ojb_anMNfLaMBT8-59zG-7" value="complete context">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-17" edge="1" parent="1" source="Ojb_anMNfLaMBT8-59zG-7" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeColor=#2E7D32;strokeWidth=2;fontSize=10;" target="Ojb_anMNfLaMBT8-59zG-8" value="ALLOW / HITL resume">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-18" edge="1" parent="1" source="Ojb_anMNfLaMBT8-59zG-8" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeColor=#2E7D32;strokeWidth=2;fontSize=10;" target="Ojb_anMNfLaMBT8-59zG-9" value="result + evidence">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-19" edge="1" parent="1" source="Ojb_anMNfLaMBT8-59zG-9" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeColor=#2E7D32;strokeWidth=2;fontSize=10;" target="Ojb_anMNfLaMBT8-59zG-10" value="audit + output">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-20" edge="1" parent="1" source="Ojb_anMNfLaMBT8-59zG-8" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeColor=#82B366;strokeWidth=2;fontSize=10;" target="Ojb_anMNfLaMBT8-59zG-11" value="Runner Adapter&#xa;needs runtime evidence">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-21" edge="1" parent="1" source="Ojb_anMNfLaMBT8-59zG-11" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeColor=#D79B00;strokeWidth=2;fontSize=10;" target="Ojb_anMNfLaMBT8-59zG-12" value="HTTP anti-corruption layer&#xa;must not bypass">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-22" edge="1" parent="1" source="Ojb_anMNfLaMBT8-59zG-12" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;strokeColor=#666666;strokeWidth=2;fontSize=10;" target="Ojb_anMNfLaMBT8-59zG-13" value="Dataset / ConnectorOperation&#xa;real proof required">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F4E78;strokeWidth=2;fontSize=12;align=left;verticalAlign=top;" value="当前真实完成度口径（静态核对）&#xa;L1：条件真实，当前工作区约 70%，远端合并状态需另核&#xa;L2：部分真实，约 40%，GraphRAG/Nebula/Milvus 真实运行未证明&#xa;Gate：基本真实，约 65%，EasyRules/顺序仍需验收&#xa;L3：部分真实，约 60%，AgentScope/Runner 边界存在但真 LLM ReAct 未完全稳定证明&#xa;L4：基本真实，约 75%，需 DB/日志证据闭环&#xa;L5：部分真实，约 40%，缓存/交付通道未达生产态&#xa;综合：约 58%-62%，不能宣称 V10 完整真实实现" vertex="1">
+          <mxGeometry height="210" width="820" x="400.00333331346513" y="1685" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0F4F8;strokeColor=#1F4E78;strokeWidth=2;fontSize=12;align=left;verticalAlign=top;" value="要把本图升级为“真实运行验收图”，还缺以下证据&#xa;1. 8091 发起请求，7072 SSE 事件流记录。&#xa;2. 7072 调 8081 Runner 的请求/响应/日志。&#xa;3. 8081 调本地 8080 Runtime 的原始入参、URL、响应。&#xa;4. 8080 调 18080 的 Dataset/ConnectorOperation 结果和业务 DB 读回。&#xa;5. L2 modelEvidence 证明 LLM / KG / Milvus / Nebula 是否真实调用或 fail-closed。&#xa;6. L3 AgentScope think/act/observe 证明 be_agent_model 来源、模型调用结果、Runner act/observe。&#xa;7. HITL 确认前无写入，确认后有真实写入和审计记录。&#xa;8. L5 输出缓存若要求生产态，必须替换进程内缓存或明确非生产限制。" vertex="1">
+          <mxGeometry height="240" width="860" x="1289.3333333134651" y="1685" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontSize=11;align=center;verticalAlign=middle;" value="绿色：代码边界基本真实，但仍需运行证据" vertex="1">
+          <mxGeometry height="50" width="280" x="2259.333333313465" y="795" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;fontSize=11;align=center;verticalAlign=middle;" value="橙色：部分真实 / 降级 / 外部依赖未证实" vertex="1">
+          <mxGeometry height="50" width="280" x="2259.333333313465" y="865" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojb_anMNfLaMBT8-59zG-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;fontSize=11;align=center;verticalAlign=middle;" value="红色：未实现 / 未验收 / 禁区或重大风险" vertex="1">
+          <mxGeometry height="50" width="280" x="2259.333333313465" y="935" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
